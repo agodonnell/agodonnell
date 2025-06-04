@@ -1,0 +1,11 @@
+NOTICE
+
+All content in this repository is copyright © 2025 AG ODonnell.  
+All rights are reserved.
+
+No part of this repository — including code, images, text, notebooks, scripts, or configuration files — may be copied, reproduced, modified, or distributed in any form without prior written permission from the copyright holder.
+
+This repository is provided for personal reference and portfolio purposes only.  
+Unauthorized use, duplication, or distribution is strictly prohibited.
+
+If you have questions or would like to request permission, contact via agodonnell.com.
