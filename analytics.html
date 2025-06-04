@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Analytics Projects – agodonnell.com</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image" />
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section bg-white">
+    <div class="intro">
+      <h1>Analytics Projects</h1>
+      <p>This section will showcase public-facing analytics projects, prototypes, and experiments. These reflect completed or in-progress work across domains like healthcare, energy, DeFi, and data engineering infrastructure.</p>
+      <p>Over time, this space will grow to include:</p>
+      <ul>
+        <li>🔄 Reproducible data pipelines and dashboard examples</li>
+        <li>📊 Custom visualizations for exploratory data analysis</li>
+        <li>🤖 ML workflows using Databricks, Snowflake, and Python</li>
+        <li>🧠 Case studies of real-world problem solving and automation</li>
+      </ul>
+      <p>While still under development, this area reflects a forward-looking intent: to share knowledge, tools, and insights useful to collaborators, employers, and peers.</p>
+    </div>
+  </div>
+
+  <div class="section bg-gray">
+    <h3>Project Highlights</h3>
+    <div class="tiles">
+      <div class="tile">
+        <img src="assets/images/bluebonnets.webp" alt="Placeholder">
+        <div>
+          <strong>Coming Soon</strong>
+          <p>Project case studies and walkthroughs will appear here.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="assets/images/snow_mountain.webp" alt="Placeholder">
+        <div>
+          <strong>Analytics Frameworks</strong>
+          <p>Reusable code and process patterns for Snowflake + Python pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

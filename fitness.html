@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Fitness | agodonnell.com</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Marathon Times</h1>
+
+    <div class="article-list">
+
+      <div class="article-item">
+        <a href="https://www.chevronhoustonmarathon.com/" target="_blank" rel="noopener noreferrer">
+          Chevron Houston Marathon
+        </a>
+        <p>Jan 13, 2008 · Houston, TX</p>
+        <div class="tags">Time: 03:30:29 · Pace: 8:01/mi · Place: 561 / 5,519 · Percentile: 10.2%</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.marathonguide.com/races/run/austin-marathon-15/2009/results" target="_blank" rel="noopener noreferrer">
+          Austin Marathon
+        </a>
+        <p>Feb 15, 2009 · Austin, TX</p>
+        <div class="tags">Time: 03:34:46 · Pace: 8:11/mi · Place: 511 / 4,174 · Percentile: 12.2%</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.marathonguide.com/races/run/rock-n-roll-san-antonio-marathon-and-12-marathon-2/2010/results" target="_blank" rel="noopener noreferrer">
+          Rock 'n' Roll San Antonio Marathon
+        </a>
+        <p>Nov 14, 2010 · San Antonio, TX</p>
+        <div class="tags">Time: 03:28:39 · Pace: 7:57/mi · Place: 296 / 4,674 · Percentile: 6.3%</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">
+          Denver Colfax Marathon
+        </a>
+        <p>May 15, 2011 · Denver, CO</p>
+        <div class="tags">Time: 03:36:12 · Pace: 8:14/mi · Place: 109 / 757 · Percentile: 14.4%</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.marathonguide.com/races/run/big-d-texas-marathon-8/2012/results" target="_blank" rel="noopener noreferrer">
+          Big-D Texas Marathon
+        </a>
+        <p>Apr 15, 2012 · Dallas, TX</p>
+        <div class="tags">Time: 03:45:06 · Pace: 8:35/mi · Place: 74 / 689 · Percentile: 10.7%</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">
+          Denver Colfax Marathon
+        </a>
+        <p>May 15, 2022 · Denver, CO</p>
+        <div class="tags">Time: 04:00:34 · Pace: 9:11/mi · Place: 285 / 1,095 · Percentile: 26.0%</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://comarathon.com" target="_blank" rel="noopener noreferrer">
+          Colorado Marathon
+        </a>
+        <p>May 5, 2024 · Fort Collins, CO</p>
+        <div class="tags">Time: 03:25:58 · Pace: 7:51/mi · Place: 168 / 1,051 · Percentile: 16.0%</div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family | agodonnell.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .collage img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .collage img:hover {
+      transform: scale(1.03);
+    }
+
+    .size-small { grid-row: span 1; }
+    .size-medium { grid-row: span 2; }
+    .size-large { grid-row: span 3; }
+  </style>
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <!-- Navigation bar with dropdowns -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1 style="text-align:center; margin-top:2rem;">A Visual Story</h1>
+    <div id="collage" class="collage"></div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV · AG O'Donnell · agodonnell.com · All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    // === Randomized Collage Rendering ===
+    const imageFilenames = [
+      "Hw_202102.webp", "ag_202010a.webp", "ag_202103.webp", "ag_pm_lj_202108a.webp",
+      "elk_202010.webp", "ew_sg_2019a.webp", "ew_sg_202110a.webp", "ew_sg_202110b.webp",
+      "hw_2020a.webp", "hw_202110a.webp", "hw_lj_pm_2021a.webp", "lj_ag_2016a.webp",
+      "od_st_a_scot.webp", "pm2021b.webp", "pm_202011a.webp", "pm_2021a.webp",
+      "pm_2021b.webp", "pm_ew_2021a.webp", "rw_2021a.webp", "sg_2021a.webp",
+      "sg_chcc_2018.webp", "sg_ew_202102a.webp", "sg_ew_202110a.webp", "sg_pm_2021a.webp",
+      "sg_pm_2021b.webp", "sg_pm_ew_2021a.webp", "ssj_mas_2021.webp",
+      "ago.webp", "bluebonnets.webp", "clover.webp", "desert_road.webp",
+      "mountain_snow.webp", "mountain_stream.webp", "snow_mountain.webp"
+      // Add more image names here
+    ];
+
+    const sizeClasses = ["size-small", "size-medium", "size-large"];
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function loadCollage() {
+      const container = document.getElementById("collage");
+      const shuffled = shuffleArray(imageFilenames.slice());
+
+      <!-- 
+      shuffled.forEach(name => {
+        const img = document.createElement("img");
+        img.src = `assets/images/family/${name}`;
+        img.alt = name.replace(".webp", "");
+        img.loading = "lazy"; // 👈 this line enables lazy loading
+        img.className = sizeClasses[Math.floor(Math.random() * sizeClasses.length)];
+        container.appendChild(img);
+      });
+       -->
+
+      shuffled.forEach(name => {
+        const img = document.createElement("img");
+        img.src = `assets/images/family/${name}`;
+        img.alt = name.replace(".webp", "");
+        img.loading = "lazy";
+        container.appendChild(img);
+      });
+    }
+
+    window.onload = () => {
+      loadCollage();
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

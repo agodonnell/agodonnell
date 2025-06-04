@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Themes - agodonnell.com</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <!-- Navigation bar with dropdowns -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="section bg-white intro">
+      <h2>Thematic Index</h2>
+      <p>Browse through thematic pages that reflect key areas of work and interest. Each section represents a curated area of content.</p>
+
+      <div class="themes-grid">
+        <a href="analytics.html" class="theme-tile">Analytics</a>
+        <a href="articles.html" class="theme-tile">Articles</a>
+        <a href="books.html" class="theme-tile">Books</a>
+        <a href="crypto.html" class="theme-tile">Crypto</a>
+        <a href="family.html" class="theme-tile">Family</a>
+        <a href="fitness.html" class="theme-tile">Fitness</a>
+        <a href="macro.html" class="theme-tile">Macro</a>
+        <a href="ml.html" class="theme-tile">Machine Learning</a>
+        <a href="quotes.html" class="theme-tile">Quotes</a>
+        <a href="videos.html" class="theme-tile">Videos</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

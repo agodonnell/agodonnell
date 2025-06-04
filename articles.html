@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Articles | agodonnell.com</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <!-- Navigation bar with dropdowns -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Interesting Articles</h1>
+
+    <div class="article-list">
+      <div class="article-item">
+        <a href="/articles/threads/2025/barclays_the-eagle-eye_20250528.pdf" target="_blank" rel="noopener noreferrer">
+          Deficit and debt concerns
+        </a>
+        <p>By Barclays Investment Bank · May 2025</p>
+        <div class="tags">#economics #deficit #debt</div>
+      </div>
+
+      <div class="article-item">
+        <a href="/articles/threads/2025/diamandis_metatrend2_end-of-white-collar-work_20250522.pdf" target="_blank" rel="noopener noreferrer">
+          The End of White-Collar Work (Metatrend #2)
+        </a>
+        <p>By Peter Diamandis · May 2025</p>
+        <div class="tags">#futureofwork #AI #automation</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://geopoliticalfutures.com/europe-whats-that" target="_blank" rel="noopener noreferrer">
+          Europe: What’s That?
+        </a>
+        <p>By George Friedman · Geopolitical Futures</p>
+        <div class="tags">#geopolitics</div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

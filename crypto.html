@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Crypto Perspectives – agodonnell.com</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image" />
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="macro.html">Macro</a>
+        <a href="crypto.html" class="active">Crypto</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section bg-white">
+    <div class="intro">
+      <h1>Crypto Perspectives</h1>
+      <p>
+        My view on crypto—particularly Bitcoin—is evolving. In a world where fiat currencies are subject to long-term debasement and where global trust in institutions continues to erode, digital assets increasingly present a compelling alternative.
+      </p>
+      <p>
+        Bitcoin has become more than a speculative trade—it represents a belief system. Ethereum and Solana offer additional dimensions to the crypto ecosystem, from programmable finance to decentralized applications. These aren't just technologies—they are infrastructure for an emerging financial paradigm.
+      </p>
+      <p>
+        I currently follow the thinking of <strong>Raoul Pal</strong>, <strong>Julien Bittel</strong>, <strong>Andreas Steno</strong>, <strong>Jordi Visser</strong>, and <strong>Michael Saylor</strong>. While I don’t subscribe wholesale to their views, I find value in the probabilistic thinking they bring to macro, monetary systems, and digital assets.
+      </p>
+      <p>
+        The narrative shift is visible: increasing U.S. regulatory alignment with crypto frameworks, institutional capital flowing in, and broader public understanding of the limitations of fiat systems. As with macro trends, none of this is certain—but the signal is growing stronger.
+      </p>
+      <p class="quote">
+        <em>“The future is already here — it's just not evenly distributed.”</em><br />
+        – William Gibson
+      </p>
+      <p>This space will grow to highlight discoveries and understanding as it reveals itself.</p>
+    </div>
+  </div>
+
+  <div class="section bg-gray">
+    <h3>Why Crypto Appears to Be Gaining Traction</h3>
+    <div class="tiles">
+      <div class="tile">
+        <img src="assets/images/bluebonnets.webp" alt="Network Effect">
+        <div>
+          <strong>Belief & Network Effect</strong>
+          <p>The more people believe in a system, the stronger and more resilient it becomes. Crypto, like all networks, thrives on shared conviction.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="assets/images/mountain_stream.webp" alt="Debasement">
+        <div>
+          <strong>Dollar Debasement</strong>
+          <p>Persistent fiscal expansion, rising debt, and declining purchasing power set the stage for alternatives like Bitcoin to rise.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="assets/images/snow_mountain.webp" alt="Digital Infrastructure">
+        <div>
+          <strong>Web3 Foundations</strong>
+          <p>Ethereum and Solana are building the digital rails of the next era—smart contracts, tokenized value, and decentralized identity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

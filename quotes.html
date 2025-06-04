@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Quotes | agodonnell.com</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Collected Quotes</h1>
+
+    <div class="quote-list">
+      <div class="quote-item">
+        <blockquote>
+          “Without a vision the people will perish.”
+        </blockquote>
+        <footer>— King Solomon, <cite>Proverbs 29:18</cite></footer>
+        <div class="tags">#bible</div>
+      </div>
+
+      <div class="quote-item">
+        <blockquote>
+          “The universe is change; our life is what our thoughts make it.”
+        </blockquote>
+        <footer>— Marcus Aurelius, <cite>Roman emperor (reigned 161–180 AD)</cite></footer>
+        <div class="tags">#stoic</div>
+      </div>
+
+      <div class="quote-item">
+        <blockquote>
+          “While the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”
+        </blockquote>
+        <footer>— Sir Arthur Conan Doyle <cite>(via Sherlock Holmes)</cite></footer>
+        <div class="tags">#statistics</div>
+      </div>
+
+      <div class="quote-item">
+        <blockquote>
+          “What starts here changes the world.”
+        </blockquote>
+        <footer>— The University of Texas at Austin</footer>
+        <div class="tags">#utexas</div>
+      </div>
+
+      <div class="quote-item">
+        <blockquote>
+          “Companies don’t magically develop those competencies just because they’ve invested in high-end analytics tools. They first need to learn how to use the data already embedded in their core operating systems, much the way people must master arithmetic before they tackle algebra. Until a company learns how to use data and analysis to support its operating decisions, it will not be in a position to benefit from data.”
+        </blockquote>
+        <footer>— Harvard Business Review</footer>
+        <div class="tags">#data</div>
+      </div>
+
+      <div class="quote-item">
+        <blockquote>
+          “This is not a story about big data, or even about big investments in data. This is a story about a lot of little data. More important, it’s about betting your business success on the ability of good people to use good data to make good decisions.”
+        </blockquote>
+        <footer>— Harvard Business Review</footer>
+        <div class="tags">#data</div>
+      </div>
+
+      <div class="quote-item">
+        <blockquote>
+          “The best way to predict the future is to invent it.”
+        </blockquote>
+        <footer>— Alan Kay</footer>
+        <div class="tags">#entrepreneur</div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

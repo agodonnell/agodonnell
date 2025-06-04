@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Privacy Policy - agodonnell.com</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image" />
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html" class="active">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html" class="active">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="cv-card">
+      <h1 style="font-size: 2rem; color: #1f2937; font-weight: 600; margin-bottom: 0.5rem;">Privacy Policy</h1>
+      <h2 style="font-size: 1.1rem; color: #6b7280; font-weight: 400; margin-top: 0;">Last updated: June 2025</h2>
+    </div>
+
+    <div class="cv-card">
+      <h3>Informational Use Only</h3>
+      <p>
+        All content on <strong>agodonnell.com</strong> is provided for general informational purposes only. Nothing on this website should be interpreted as professional advice or as forming any kind of service agreement.
+      </p>
+    </div>
+
+    <div class="cv-card">
+      <h3>No Data Collection</h3>
+      <p>
+        This site does <strong>not</strong> collect, store, or track any personal information from visitors. There are no forms, logins, analytics cookies, or hidden tracking scripts.
+      </p>
+    </div>
+
+    <div class="cv-card">
+      <h3>No Cookies</h3>
+      <p>
+        <strong>agodonnell.com</strong> does not use cookies, beacons, tracking pixels, or similar technologies. You may browse freely without interference.
+      </p>
+    </div>
+
+    <div class="cv-card">
+      <h3>External Links</h3>
+      <p>
+        This site may include links to third-party websites (e.g., Audible, GitHub). While all links were clean and valid at the time of posting, <strong>agodonnell.com</strong> does not control or endorse external sites and is not responsible for:
+      </p>
+      <ul>
+        <li>The content or accuracy of external pages,</li>
+        <li>Any data collection practices they may engage in,</li>
+        <li>Or their privacy or security policies.</li>
+      </ul>
+      <p>
+        Users should review the privacy policy of any external site they visit.
+      </p>
+    </div>
+
+    <div class="cv-card">
+      <h3>Policy Updates</h3>
+      <p>
+        This policy may be updated periodically. Updates will be reflected by the “Last updated” date above.
+      </p>
+    </div>
+
+    <div class="cv-card">
+      <h3>Contact</h3>
+      <p>
+        If you have questions or concerns about this privacy policy, feel free to reach out using the contact details listed on the homepage.
+      </p>
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

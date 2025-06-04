@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Curriculum Vitae - agodonnell.com</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image" />
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html" class="active">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html" class="active">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="cv-card">
+      <h1 style="font-size: 2rem; color: #1f2937; font-weight: 600; margin-bottom: 0.5rem;">AG O'Donnell</h1>
+      <h2 style="font-size: 1.25rem; color: #6b7280; font-weight: 400; margin-top: 0;">Senior Data Engineer</h2>
+    </div>
+
+    <div class="cv-card">
+      <p><strong>Builder of</strong> reproducible data systems that support large-scale analytics, reporting pipelines, and research operations.</p>
+    </div>
+
+    <div class="cv-card">
+      <h3>Skills Snapshot</h3>
+      <ul>
+        <li><strong>Languages:</strong> SQL, Python, SAS, R</li>
+        <li><strong>Platforms & Tools:</strong> Snowflake, Databricks, Git, Tableau</li>
+        <li><strong>Modeling & QC:</strong> ARIMA, z-Score anomaly detection, predictive systems</li>
+        <li><strong>Workflow Design:</strong> Scalable ETL automation, reproducible pipelines, agile collaboration</li>
+        <li><strong>Domains:</strong> Data integration, longitudinal analysis, risk mitigation</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Recent Focus: Senior Data Engineer</h3>
+      <ul>
+        <li>Maintain and scale ML pipelines and reproducible datasets</li>
+        <li>Develop systems for monthly file generation, QC, and exploratory analysis</li>
+        <li>Collaborate in agile teams to support feature derivation and metric design</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Background: Analytics</h3>
+      <ul>
+        <li>Designed SQL, Python, and SAS pipelines to extract, clean, and validate data</li>
+        <li>Built anomaly detection logic using statistical techniques such as z-Score and ARIMA modeling</li>
+        <li>Developed reusable scripts to streamline monthly and annual deliverables</li>
+        <li>Maintained transformation routines and quality checks for high-volume datasets</li>
+        <li>Adapted workflows to evolving user needs through cross-functional collaboration</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Foundational Roles: Business Advisor / Vice President – International Financial Services</h3>
+      <ul>
+        <li>Evaluated and enacted solutions for offshore investment and credit enhancement</li>
+        <li>Advised on cross-border operations and capital structure improvements</li>
+        <li>Interfaced with internal analysts to shape data-informed client reports and financial presentations</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Education</h3>
+      <ul>
+        <li><strong>M.S., Data Science</strong> – Northwestern University</li>
+        <li><strong>B.B.A., Finance</strong> – University of Texas at Austin</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Languages</h3>
+      <ul>
+        <li><strong>Spanish:</strong> Near-fluent; comfortable in professional and technical conversations</li>
+        <li><strong>German:</strong> Basic reading and conversational familiarity</li>
+        <li><strong>French:</strong> Basic reading and conversational familiarity</li>
+      </ul>
+    </div>
+
+    <div class="cv-card">
+      <h3>Additional Qualifications</h3>
+      <ul>
+        <li>Background in regulated financial advising (Series 7/66 and insurance; licenses inactive)</li>
+        <li>Interest and foundational knowledge in UAV operations (FAA Part 107; not currently active)</li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

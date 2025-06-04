@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Videos | agodonnell.com</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <!-- Header image -->
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <!-- Navigation bar with dropdowns -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content area -->
+  <main class="container">
+    <h1>Interesting Videos</h1>
+
+    <div class="article-list">
+      <div class="article-item">
+        <a href="https://www.youtube.com/watch?v=id4YRO7G0wE" target="_blank" rel="noopener noreferrer">
+          The AI Revolution Is Underhyped | Eric Schmidt
+        </a>
+        <p>TED Talk · May 15, 2025</p>
+        <div class="tags">#AI #technology #future</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.youtube.com/watch?v=3-vBBYEXv6M" target="_blank" rel="noopener noreferrer">
+          Bitcoin for Corporations 2025 Keynote | Michael Saylor
+        </a>
+        <p>Strategy World 2025 · May 8, 2025</p>
+        <div class="tags">#bitcoin #corporate #strategy</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.youtube.com/watch?v=ONIexChUpuw&t=17s" target="_blank" rel="noopener noreferrer">
+          Opening Keynote: The Future of Commerce
+        </a>
+        <p>Stripe Sessions 2025 · May 1, 2025</p>
+        <div class="tags">#payments #commerce #stripe</div>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.youtube.com/watch?v=LNOtiRB3uyk" target="_blank" rel="noopener noreferrer">
+          Kary Mullis: Celebrating the Scientific Experiment
+        </a>
+        <p>TED Talk · Jan 6, 2009</p>
+        <div class="tags">#science #creativity #innovation</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

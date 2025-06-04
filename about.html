@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>About - agodonnell.com</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <!-- Navigation bar with dropdowns -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html" class="active">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="section bg-white intro">
+
+        <h3><em>Some words about AG O'Donnell</em></h3>
+        <p>
+        Hi there! I was born in a small town in the United States and have spent most of my life in Texas and Colorado. I’ve also spent a great deal of time in Mexico, both as a child and as an adult. 
+        I attended the University of Texas at Austin.
+        </p>
+
+        <img src="/assets/images/ago.webp" alt="The Tower" class="profile-photo" />
+
+        <h3><em>Some more about my path</em></h3>
+        <p>
+        I originally pursued a career in Finance, back when the Texas business school carried the name of Dr. Kozmetsky. 
+        Over time, I worked with private equity firms, wire houses, and investment banks. 
+        My focus was helping clients fund their entry into new markets—work that required identifying performance indicators and modeling expected outcomes. 
+        That evolved into designing metrics to evaluate competing strategies.
+        </p>
+
+        <h3><em>A change in direction</em></h3>
+        <p>
+        As time went on, data became a central focus. I pursued new technical skills and earned a Master of Science in Data Science from Northwestern University. 
+        </p>
+        <p>
+        A lot of success in data comes from knowing how to frame a problem. Programming is equally important—but challenging. 
+        It’s not just about learning a language; it’s about structuring ideas so that computers can execute them reliably.
+        </p>
+
+        <h3><em>A fun reality</em></h3>
+        <p>
+        That pursuit of clarity and structure has led me to work with both startups and large enterprises—each with unique challenges and datasets. 
+        I’ve built systems that connect, prepare, and analyze data streams—using APIs, cloud-based algorithms, and multi-stage storage pipelines.
+        </p>
+        <p>
+        Each project demands thoughtful planning, continuous learning, and precise execution.
+        </p>
+
+        <div class="quote">
+          “This is not a story about big data, or even about big investments in data. 
+          This is a story about a lot of little data. 
+          More important, it’s about betting your business success on the ability of good people to use good data to make good decisions.”
+          <br><em>— Harvard Business Review</em>
+        </div>
+
+        <p><strong>Let’s visit!</strong></p>
+    </div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

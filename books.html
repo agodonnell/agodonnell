@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Books | agodonnell.com</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Book Ideas</h1>
+    <div class="book-grid" id="bookGrid"></div>
+  </main>
+
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
+
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    const books = [
+      { title: "Meditations", author: "Marcus Aurelius", url: "https://www.audible.com/pd/Meditations-Audiobook/B004IBRMZS" },
+      { title: "The Art of Learning and Self-Development", author: "Nathaniel Davids", url: "https://www.audible.com/pd/The-Art-of-Learning-and-Self-Development-Audiobook/B078JZCGQN" },
+      { title: "Killing Lincoln", author: "Bill O'Reilly", url: "https://www.audible.com/pd/Killing-Lincoln-Audiobook/B005OCRVZ6" },
+      { title: "The AI-Driven Leader", author: "Leanne Luce", url: "https://www.audible.com/pd/The-AI-Driven-Leader-Audiobook/B0DDD8R9LR" },
+      { title: "Abundance", author: "Peter H. Diamandis & Steven Kotler", url: "https://www.audible.com/pd/Abundance-Audiobook/154143384X" },
+      { title: "Casa de espías", author: "Daniel Silva", url: "https://www.audible.com/pd/Casa-de-espias-House-of-Spies-Audiobook/B079V22Z41" },
+      { title: "Superintelligence", author: "Nick Bostrom", url: "https://www.audible.com/pd/Superintelligence-Audiobook/B00LPMD72K" },
+      { title: "Broken Money", author: "Lyn Alden", url: "https://www.audible.com/pd/Broken-Money-Audiobook/B0CNSDDBTM" },
+      { title: "The Singularity Is Nearer", author: "Ray Kurzweil", url: "https://www.audible.com/pd/The-Singularity-Is-Nearer-Audiobook/0593148916" },
+      { title: "The Singularity Is Near", author: "Ray Kurzweil", url: "https://www.audible.com/pd/The-Singularity-Is-Near-Audiobook/0593163265" },
+      { title: "Superforecasting", author: "Philip E. Tetlock & Dan Gardner", url: "https://www.audible.com/pd/Superforecasting-Audiobook/B0131RM7OK" },
+      { title: "Zero to One", author: "Peter Thiel", url: "https://www.audible.com/pd/Zero-to-One-Audiobook/B00M27LBU2" },
+      { title: "A Man for All Markets", author: "Edward O. Thorp", url: "https://www.audible.com/pd/A-Man-for-All-Markets-Audiobook/B01MU5XTWY" },
+      { title: "Fortune's Formula", author: "William Poundstone", url: "https://www.audible.com/pd/Fortunes-Formula-Audiobook/B072VWPJ1H" },
+      { title: "Supercommunicators", author: "Charles Duhigg", url: "https://www.audible.com/pd/Supercommunicators-Audiobook/B0C6YM6Q41" },
+      { title: "The 4-Hour Workweek", author: "Timothy Ferriss", url: "https://www.audible.com/pd/The-4-Hour-Workweek-Escape-9-5-Live-Anywhere-and-Join-the-New-Rich-Expanded-and-Updated-Audiobook/B0031AS3BE" },
+      { title: "The Art of Learning", author: "Josh Waitzkin", url: "https://www.audible.com/pd/The-Art-of-Learning-Audiobook/B00JAOOBHU" },
+      { title: "Mastery", author: "Robert Greene", url: "https://www.audible.com/pd/Mastery-Audiobook/B00A4OPH0U" },
+      { title: "The Man Who Solved the Market", author: "Gregory Zuckerman", url: "https://www.audible.com/pd/The-Man-Who-Solved-the-Market-Audiobook/0593148193" },
+      { title: "Ichimoku Charting & Technical Analysis", author: "Charles G. Koonitz", url: "https://www.audible.com/pd/Ichimoku-Charting-Technical-Analysis-Audiobook/B0BQ7Q6XT3" },
+      { title: "Atomic Habits", author: "James Clear", url: "https://www.audible.com/pd/Atomic-Habits-Audiobook/1524779261" },
+      { title: "The Challenger Sale", author: "Matthew Dixon & Brent Adamson", url: "https://www.audible.com/pd/The-Challenger-Sale-Audiobook/0593163141" },
+      { title: "Seizing the Enigma", author: "David Kahn", url: "https://www.audible.com/pd/Seizing-the-Enigma-Audiobook/B0084HIP5S" },
+      { title: "La maison aux espions", author: "Daniel Silva", url: "https://www.audible.com/pd/La-maison-aux-espions-Audiobook/B09VQ17K91" },
+      { title: "The Accidental Superpower", author: "Peter Zeihan", url: "https://www.audible.com/pd/The-Accidental-Superpower-Audiobook/B0CQ3BGCVQ" },
+      { title: "Taming the Sun", author: "Varun Sivaram", url: "https://www.audible.com/pd/Taming-the-Sun-Audiobook/B07DHQDMDM" },
+      { title: "Outliers", author: "Malcolm Gladwell", url: "https://www.audible.com/pd/Outliers-Audiobook/B002UZDRK8" },
+      { title: "The Fourth Turning", author: "William Strauss & Neil Howe", url: "https://www.audible.com/pd/The-Fourth-Turning-Audiobook/B0CLWYD57Q" },
+      { title: "The Fourth Turning Is Here", author: "Neil Howe", url: "https://www.audible.com/pd/The-Fourth-Turning-Is-Here-Audiobook/B0BJSHC5VX" },
+      { title: "Antifragile", author: "Nassim Nicholas Taleb", url: "https://www.audible.com/pd/Antifragile-Audiobook/B009PRJ6BS" },
+      { title: "Principles for Dealing with the Changing World Order", author: "Ray Dalio", url: "https://www.audible.com/pd/Principles-for-Dealing-with-the-Changing-World-Order-Audiobook/1797115782" },
+      { title: "Outlive", author: "Peter Attia & Bill Gifford", url: "https://www.audible.com/pd/Outlive-Audiobook/B0B6444XS3" }
+    ];
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const bookGrid = document.getElementById("bookGrid");
+    shuffle(books).forEach(book => {
+      const tile = document.createElement("div");
+      tile.className = "book-tile";
+      tile.innerHTML = `
+        <a href="${book.url}" target="_blank" rel="noopener noreferrer">${book.title}</a>
+        <div class="author">${book.author}</div>
+      `;
+      bookGrid.appendChild(tile);
+    });
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>
