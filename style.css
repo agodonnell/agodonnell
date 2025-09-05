@@ -182,6 +182,43 @@ body {
   margin: 2.5rem auto;
 }
 
+/* Clean, single-column feature rows */
+.feature-list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 14px;
+}
+.feature{
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border: 1px solid #e8eef5;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.035);
+}
+.feature .icon{
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  background: #f3f7ff;
+  color: #345;
+  font-size: 18px;
+}
+.feature h3{
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: #1f2a37;
+}
+.feature p{
+  margin: 0;
+  color: #49576a;
+}
+
 .footer {
   background-color: var(--footer);
   color: white;
@@ -229,6 +266,18 @@ header img {
   margin-bottom: 1.5rem;
 }
 
+/* Punchier opening line */
+.intro-lede{
+  margin: .25rem 0 1rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #3e4a5a;
+}
+
+.intro li {
+  margin-bottom: 0.5rem;
+}
+
 .intro p {
   font-size: 1.1rem;
   color: #6b7280;
@@ -239,8 +288,14 @@ header img {
   font-weight: 400;
 }
 
-.intro li {
-  margin-bottom: 0.5rem;
+/* Subtle pull-quote */
+.intro-quote{
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border-left: 4px solid #5fa8ff;
+  background: #f6faff;
+  color: #2b3a4d;
+  border-radius: 8px;
 }
 
 .intro ul {
