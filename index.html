@@ -41,16 +41,20 @@
     .logo{font-size:12px;border:1px dashed #243; color:#8fa3b8; padding:6px 8px;border-radius:8px}
     .small{font-size:13px;color:var(--muted)}
     .hr{height:1px;background:#1b2027;margin:24px 0}
+    /* terms list */
+    .terms dt{font-weight:600;margin-top:10px}
+    .terms dd{color:var(--muted);margin:4px 0 10px 0}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">Aaron O'Donnell</div>
-      <nav class="nav">
-        <a href="#work" data-i18n="nav.work"></a>
+    <nav class="nav"></nav>
+      <a href="#work" data-i18n="nav.work"></a>
         <a href="#about" data-i18n="nav.about"></a>
         <a href="#contact" data-i18n="nav.contact"></a>
+        <a href="#terms" data-i18n="nav.terms"></a>
         <div class="lang">
           <button id="lang-en" aria-label="English">EN</button>
           <button id="lang-es" aria-label="Español">ES</button>
@@ -126,6 +130,26 @@
       </div>
     </section>
 
+    <section id="terms" class="grid">
+      <div class="col-12 card">
+        <h2 data-i18n="terms.title"></h2>
+        <dl class="terms">
+          <dt data-i18n="terms.sc.title"></dt>
+          <dd data-i18n="terms.sc.desc"></dd>
+          <dt data-i18n="terms.oracle.title"></dt>
+          <dd data-i18n="terms.oracle.desc"></dd>
+          <dt data-i18n="terms.rail.title"></dt>
+          <dd data-i18n="terms.rail.desc"></dd>
+          <dt data-i18n="terms.l1l2.title"></dt>
+          <dd data-i18n="terms.l1l2.desc"></dd>
+          <dt data-i18n="terms.token.title"></dt>
+          <dd data-i18n="terms.token.desc"></dd>
+        </dl>
+        <div class="hr"></div>
+        <p class="small" data-i18n="terms.note"></p>
+      </div>
+    </section>
+
     <section id="contact" class="grid">
       <div class="col-12 card">
         <h2 data-i18n="contact.title"></h2>
@@ -153,17 +177,17 @@
         "nav.about": "About",
         "nav.contact": "Contact",
         "hero.badge": "Digital Asset Strategist",
-        "hero.title": "Cross‑border settlement for real‑world businesses",
+        "hero.title": "Settlement infrastructure for cross-border trade and payments",
         "hero.sub1": "I help exporters, importers, and finance teams move money and assets across borders with smart‑contract settlement, stablecoin rails, and tokenized finance—faster, safer, auditable.",
-        "hero.sub2": "Senior Data Engineer by training; now focused on on‑chain payment design and digital asset infrastructure.",
+        "hero.sub2": "Finance-trained strategist with deep data engineering experience, focused on building and explaining the systems powering this transformation.",
         "hero.cta1": "See how I work",
         "hero.cta2": "About & background",
         "focus.title": "Focus",
         "focus.item1": "Smart‑escrow and delivery‑versus‑payment logic for trade",
         "focus.item2": "Stablecoin flows (USDC/EURC) on high‑speed settlement rails",
         "focus.item3": "Comparative guidance across BTC / ETH / SOL / SUI",
-        "focus.item4": "Alignment with institutional infrastructure (Visa, Circle, Chainlink, Franklin)",
-        "focus.note": "Multilingual engagement is part of every mandate.",
+        "focus.item4": "Alignment with institutional infrastructure (Visa, Circle, Chainlink, Franklin Templeton)",
+        "focus.note": "Multilingual engagement.",
         "services.title": "Services & Engagement",
         "services.item1": "Advisory onboarding: education, wallet setup, risk mapping",
         "services.item2": "Implementation: smart‑contract escrow, oracle integrations",
@@ -181,24 +205,37 @@
         "posts.item2": "Who’s Building the Rails: Visa, Circle, Chainlink, Franklin (coming soon)",
         "posts.note": "Substack launching shortly. Bilingual posts (EN/ES).",
         "contact.title": "Get in touch",
-        "footer.rights": "All rights reserved."
+        "footer.rights": "All rights reserved.",
+        "nav.terms": "Terms",
+        "terms.title": "Key terms, in plain English",
+        "terms.note": "No blockchain jargon required to work with me.",
+        "terms.sc.title": "Smart‑contract escrow",
+        "terms.sc.desc": "Funds are held and automatically released when agreed conditions are met (e.g., delivery confirmed).",
+        "terms.oracle.title": "Oracle",
+        "terms.oracle.desc": "A trusted data feed that connects contracts to real‑world information (delivery, prices, compliance).",
+        "terms.rail.title": "Stablecoin rail",
+        "terms.rail.desc": "A fast, programmable system for moving tokenized dollars (e.g., USDC on Solana).",
+        "terms.l1l2.title": "Layer 1 / Layer 2",
+        "terms.l1l2.desc": "Base blockchain vs. performance layers on top — think highways and express lanes.",
+        "terms.token.title": "Tokenized asset",
+        "terms.token.desc": "A traditional asset (like a fund or T‑bill) represented digitally on a blockchain."
       },
       es: {
         "nav.work": "Servicios",
         "nav.about": "Perfil",
         "nav.contact": "Contacto",
         "hero.badge": "Estratega de Activos Digitales",
-        "hero.title": "Liquidación transfronteriza para empresas del mundo real",
+        "hero.title": "Infraestructura de liquidación para comercio y pagos transfronterizos.",
         "hero.sub1": "Ayudo a exportadores, importadores y equipos financieros a mover dinero y activos a través de fronteras con liquidación en contratos inteligentes, rieles de stablecoins y finanzas tokenizadas—más rápido, seguro y auditable.",
-        "hero.sub2": "Ingeniero de datos senior de formación; ahora enfocado en el diseño de pagos on‑chain y la infraestructura de activos digitales.",
+        "hero.sub2": "Estratega con formación en finanzas y amplia experiencia en ingeniería de datos, enfocado en construir y explicar los sistemas que impulsan esta transformación.",
         "hero.cta1": "Cómo trabajo",
         "hero.cta2": "Perfil y trayectoria",
         "focus.title": "Enfoque",
         "focus.item1": "Escrow inteligente y lógica de entrega‑contra‑pago para comercio",
         "focus.item2": "Flujos con stablecoins (USDC/EURC) en rieles de alta velocidad",
         "focus.item3": "Guía comparativa entre BTC / ETH / SOL / SUI",
-        "focus.item4": "Alineación con infraestructura institucional (Visa, Circle, Chainlink, Franklin)",
-        "focus.note": "El enfoque multilingüe forma parte de cada proyecto.",
+        "focus.item4": "Alineación con infraestructura institucional (Visa, Circle, Chainlink, Franklin Templeton)",
+        "focus.note": "El enfoque multilingüe.",
         "services.title": "Servicios y Modalidades",
         "services.item1": "Onboarding estratégico: educación, wallets, mapa de riesgos",
         "services.item2": "Implementación: escrow con contratos inteligentes, oráculos",
@@ -216,7 +253,20 @@
         "posts.item2": "Quién construye los rieles: Visa, Circle, Chainlink, Franklin (próximamente)",
         "posts.note": "Substack próximamente. Publicaciones bilingües (EN/ES).",
         "contact.title": "Contacto",
-        "footer.rights": "Todos los derechos reservados."
+        "footer.rights": "Todos los derechos reservados.",
+        "nav.terms": "Glosario",
+        "terms.title": "Términos clave, en lenguaje claro",
+        "terms.note": "No es necesario hablar ‘blockchain’ para trabajar conmigo.",
+        "terms.sc.title": "Escrow con contratos inteligentes",
+        "terms.sc.desc": "Los fondos se mantienen y se liberan automáticamente cuando se cumplen las condiciones acordadas (por ejemplo, entrega confirmada).",
+        "terms.oracle.title": "Oráculo",
+        "terms.oracle.desc": "Fuente de datos confiable que conecta los contratos con información del mundo real (entrega, precios, cumplimiento).",
+        "terms.rail.title": "Riel de stablecoins",
+        "terms.rail.desc": "Sistema rápido y programable para mover dólares tokenizados (por ejemplo, USDC en Solana).",
+        "terms.l1l2.title": "Capa 1 / Capa 2",
+        "terms.l1l2.desc": "Cadena base frente a capas de rendimiento por encima — como autopistas y carriles exprés.",
+        "terms.token.title": "Activo tokenizado",
+        "terms.token.desc": "Un activo tradicional (como un fondo o T‑bill) representado de forma digital en una blockchain."
       }
     };
 
