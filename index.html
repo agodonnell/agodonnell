@@ -54,18 +54,6 @@
     /* social icons */
     .social a{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;color:var(--text);transition:color .2s ease}
     .social a:hover{color:var(--accent)}
-    /* back-to-top button */
-    .back-to-top{
-      position:fixed; right:16px; bottom:16px;
-      width:48px; height:48px; display:grid; place-items:center;
-      border-radius:999px; background:#111824; border:1px solid #2b3848;
-      color:var(--text); font-size:22px; text-decoration:none;
-      opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease;
-      box-shadow:0 8px 18px rgba(0,0,0,.45);
-      z-index:9999;
-    }
-    .back-to-top.show{opacity:.95; pointer-events:auto;}
-    .back-to-top:hover{transform:translateY(-2px);}
   </style>
 </head>
 <body>
@@ -268,9 +256,6 @@
     </footer>
   </div>
 
-  <!-- Back-to-top button -->
-  <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
-
   <script>
     // i18n copy
     const copy = {
@@ -398,15 +383,6 @@
     setLang(localStorage.getItem('site_lang') || 'en');
 
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Back-to-top visibility toggle
-    const btt = document.querySelector('.back-to-top');
-    function toggleBtt(){
-      if (!btt) return;
-      btt.classList.toggle('show', window.scrollY > 100);
-    }
-    window.addEventListener('scroll', toggleBtt);
-    window.addEventListener('load', toggleBtt);
   </script>
 </body>
 </html>
