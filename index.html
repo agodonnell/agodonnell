@@ -18,7 +18,10 @@
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1024px;margin:0 auto;padding:28px 20px 64px}
-    header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:24px}
+    header{
+      display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:24px;
+      position:sticky; top:0; z-index:1000; background:var(--bg); border-bottom:1px solid #1c222a; padding-top:16px;
+    }
     .brand{font-weight:700;letter-spacing:.2px}
     .framing-line{color:var(--muted);font-size:13px;margin-top:2px}
     .nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
@@ -39,7 +42,7 @@
     @media(max-width:860px){.hero{grid-template-columns:1fr}.col-6{grid-column:span 12}}
     h2{font-size:22px;margin:8px 0 10px}
     ul{margin:8px 0 0 18px;color:var(--muted)}
-    .footer{margin-top:48px;color:#7b8794;font-size:13px;display:flex;flex-wrap:wrap;gap:8px}
+    .footer{margin-top:48px;color:#7b8794;font-size:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
     .logos{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
     .logo{font-size:12px;border:1px dashed #243; color:#8fa3b8; padding:6px 8px;border-radius:8px}
     .small{font-size:13px;color:var(--muted)}
@@ -64,6 +67,7 @@
         <div class="framing-line">Digital Asset Strategist focused on settlement infrastructure for cross-border trade and payments.</div>
       </div>
       <nav class="nav">
+        <a href="#home" data-i18n="nav.top"></a>
         <a href="#work" data-i18n="nav.work"></a>
         <a href="#about" data-i18n="nav.about"></a>
         <a href="#terms" data-i18n="nav.terms"></a>
@@ -253,6 +257,8 @@
       <span>&copy; <span id="year"></span> Aaron O'Donnell</span>
       <span>·</span>
       <span data-i18n="footer.rights"></span>
+      <span>·</span>
+      <a href="#home" aria-label="Back to top">↑ Top</a>
     </footer>
   </div>
 
@@ -260,6 +266,7 @@
     // i18n copy
     const copy = {
       en: {
+        "nav.top": "Top",
         "nav.work": "Work",
         "nav.about": "About",
         "nav.contact": "Contact",
@@ -313,6 +320,7 @@
         "footer.rights": "All rights reserved."
       },
       es: {
+        "nav.top": "Inicio",
         "nav.work": "Servicios",
         "nav.about": "Perfil",
         "nav.contact": "Contacto",
