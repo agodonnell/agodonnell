@@ -57,6 +57,13 @@
     /* social icons */
     .social a{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;color:var(--text);transition:color .2s ease}
     .social a:hover{color:var(--accent)}
+    /* fitness toggle */
+    .toggle {
+      background:transparent;border:1px solid #263040;color:var(--text);
+      border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer;
+      display:inline-flex;align-items:center;gap:8px
+    }
+    .hidden{display:none}
   </style>
 </head>
 <body>
@@ -148,8 +155,10 @@
       </div>
     </section>
 
-    <section id="terms" class="grid">
-      <div class="col-12 card">
+    <!-- TERMS + FITNESS SIDE BY SIDE -->
+    <section id="glossary-and-fitness" class="grid">
+      <!-- TERMS (left) -->
+      <div class="col-6 card" id="terms">
         <h2 data-i18n="terms.title"></h2>
         <dl class="terms">
           <dt data-i18n="terms.sc.title"></dt>
@@ -168,13 +177,14 @@
         <div class="hr"></div>
         <p class="small" data-i18n="terms.note"></p>
       </div>
-    </section>
 
-    <section id="fitness" class="grid">
-      <div class="col-12 card">
-        <h2 data-i18n="fitness.title"></h2>
-        <div class="article-list">
-
+      <!-- FITNESS (right) with toggle -->
+      <div class="col-6 card" id="fitness">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <h2 style="margin:0" data-i18n="fitness.title"></h2>
+          <button id="fitness-toggle" class="toggle" aria-expanded="false" aria-controls="fitness-list" data-i18n="fitness.toggle.show"></button>
+        </div>
+        <div id="fitness-list" class="article-list hidden" role="region" aria-live="polite">
           <div class="article-item">
             <a href="https://comarathon.com" target="_blank" rel="noopener noreferrer">Colorado Marathon</a>
             <p>May 5, 2024 · Fort Collins, CO</p>
@@ -216,11 +226,11 @@
             <p>Jan 13, 2008 · Houston, TX</p>
             <div class="tags">Time: 03:30:29 · Pace: 8:01/mi · Place: 561 / 5,519 · Percentile: 10.2%</div>
           </div>
-
         </div>
         <p class="small" data-i18n="fitness.tagline"></p>
       </div>
     </section>
+    <!-- /TERMS + FITNESS -->
 
     <section id="contact" class="grid">
       <div class="col-12 card">
@@ -316,6 +326,8 @@
         "terms.token.desc": "A traditional asset (like a fund or T‑bill) represented digitally on a blockchain.",
         "fitness.title": "Endurance Efforts",
         "fitness.tagline": "Always working for the PR.",
+        "fitness.toggle.show": "Show races",
+        "fitness.toggle.hide": "Hide races",
         "contact.title": "Get in touch",
         "footer.rights": "All rights reserved."
       },
@@ -370,12 +382,17 @@
         "terms.token.desc": "Un activo tradicional (como un fondo o un T‑bill) representado de forma digital en una blockchain.",
         "fitness.title": "Esfuerzos de resistencia",
         "fitness.tagline": "Siempre en busca de mi mejor marca personal.",
+        "fitness.toggle.show": "Ver carreras",
+        "fitness.toggle.hide": "Ocultar carreras",
         "contact.title": "Contacto",
         "footer.rights": "Todos los derechos reservados."
       }
     };
 
+    let currentLang = 'en';
+
     function setLang(lang){
+      currentLang = lang;
       document.querySelectorAll("[data-i18n]").forEach(el=>{
         const key = el.getAttribute("data-i18n");
         el.textContent = copy[lang][key] || "";
@@ -385,10 +402,29 @@
       const btn = document.getElementById('lang-'+lang);
       if (btn) btn.classList.add('active');
       document.documentElement.lang = lang;
+
+      // Update fitness toggle label to match language + current state
+      const toggle = document.getElementById('fitness-toggle');
+      const list = document.getElementById('fitness-list');
+      if (toggle && list) {
+        toggle.textContent = copy[lang][ list.classList.contains('hidden') ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
+      }
     }
+
     document.getElementById('lang-en').onclick = ()=>setLang('en');
     document.getElementById('lang-es').onclick = ()=>setLang('es');
     setLang(localStorage.getItem('site_lang') || 'en');
+
+    // Fitness expand/collapse
+    const fitnessToggle = document.getElementById('fitness-toggle');
+    const fitnessList = document.getElementById('fitness-list');
+    if (fitnessToggle && fitnessList){
+      fitnessToggle.addEventListener('click', ()=>{
+        const nowHidden = fitnessList.classList.toggle('hidden');
+        fitnessToggle.setAttribute('aria-expanded', String(!nowHidden));
+        fitnessToggle.textContent = copy[currentLang][ nowHidden ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
+      });
+    }
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
