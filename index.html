@@ -159,23 +159,29 @@
     <section id="glossary-and-fitness" class="grid">
       <!-- TERMS (left) -->
       <div class="col-6 card" id="terms">
-        <h2 data-i18n="terms.title"></h2>
-        <dl class="terms">
-          <dt data-i18n="terms.sc.title"></dt>
-          <dd data-i18n="terms.sc.desc"></dd>
-          <dt data-i18n="terms.oracle.title"></dt>
-          <dd data-i18n="terms.oracle.desc"></dd>
-          <dt data-i18n="terms.rail.title"></dt>
-          <dd data-i18n="terms.rail.desc"></dd>
-          <dt data-i18n="terms.l1l2.title"></dt>
-          <dd data-i18n="terms.l1l2.desc"></dd>
-          <dt data-i18n="terms.shill.title"></dt>
-          <dd data-i18n="terms.shill.desc"></dd>
-          <dt data-i18n="terms.token.title"></dt>
-          <dd data-i18n="terms.token.desc"></dd>
-        </dl>
-        <div class="hr"></div>
-        <p class="small" data-i18n="terms.note"></p>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <h2 style="margin:0" data-i18n="terms.title"></h2>
+          <button id="terms-toggle" class="toggle" aria-expanded="false" aria-controls="terms-list" data-i18n="terms.toggle.show"></button>
+        </div>
+
+        <div id="terms-list" class="hidden" role="region" aria-live="polite">
+          <dl class="terms">
+            <dt data-i18n="terms.sc.title"></dt>
+            <dd data-i18n="terms.sc.desc"></dd>
+            <dt data-i18n="terms.oracle.title"></dt>
+            <dd data-i18n="terms.oracle.desc"></dd>
+            <dt data-i18n="terms.rail.title"></dt>
+            <dd data-i18n="terms.rail.desc"></dd>
+            <dt data-i18n="terms.l1l2.title"></dt>
+            <dd data-i18n="terms.l1l2.desc"></dd>
+            <dt data-i18n="terms.shill.title"></dt>
+            <dd data-i18n="terms.shill.desc"></dd>
+            <dt data-i18n="terms.token.title"></dt>
+            <dd data-i18n="terms.token.desc"></dd>
+          </dl>
+          <div class="hr"></div>
+          <p class="small" data-i18n="terms.note"></p>
+        </div>
       </div>
 
       <!-- FITNESS (right) with toggle -->
@@ -324,6 +330,8 @@
         "terms.shill.desc": "Someone who promotes a product, token, or project in a biased or misleading way, often without disclosing a financial interest. In short: hype without transparency. (Origin: carnival/show-business slang for a planted accomplice who feigns enthusiasm; later adopted in finance/crypto.)",
         "terms.token.title": "Tokenized asset",
         "terms.token.desc": "A traditional asset (like a fund or T‑bill) represented digitally on a blockchain.",
+        "terms.toggle.show": "Show glossary",
+        "terms.toggle.hide": "Hide glossary",
         "fitness.title": "Endurance Efforts",
         "fitness.tagline": "Always working for the PR.",
         "fitness.toggle.show": "Show races",
@@ -380,6 +388,8 @@
         "terms.shill.desc": "Persona que promociona un producto, token o proyecto de forma sesgada o engañosa, a menudo sin revelar su interés económico. En resumen: ‘hype’ sin transparencia. (Origen: jerga de ferias/espectáculos para un “cómplice” colocado en la audiencia que finge entusiasmo; luego adoptado en finanzas/cripto.)",
         "terms.token.title": "Activo tokenizado",
         "terms.token.desc": "Un activo tradicional (como un fondo o un T‑bill) representado de forma digital en una blockchain.",
+        "terms.toggle.show": "Ver glosario",
+        "terms.toggle.hide": "Ocultar glosario",
         "fitness.title": "Esfuerzos de resistencia",
         "fitness.tagline": "Siempre en busca de mi mejor marca personal.",
         "fitness.toggle.show": "Ver carreras",
@@ -409,6 +419,12 @@
       if (toggle && list) {
         toggle.textContent = copy[lang][ list.classList.contains('hidden') ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
       }
+      // Update terms toggle label to match language + current state
+      const tToggle = document.getElementById('terms-toggle');
+      const tList = document.getElementById('terms-list');
+      if (tToggle && tList) {
+        tToggle.textContent = copy[lang][ tList.classList.contains('hidden') ? 'terms.toggle.show' : 'terms.toggle.hide' ];
+      }
     }
 
     document.getElementById('lang-en').onclick = ()=>setLang('en');
@@ -423,6 +439,16 @@
         const nowHidden = fitnessList.classList.toggle('hidden');
         fitnessToggle.setAttribute('aria-expanded', String(!nowHidden));
         fitnessToggle.textContent = copy[currentLang][ nowHidden ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
+      });
+    }
+    // Terms expand/collapse
+    const termsToggle = document.getElementById('terms-toggle');
+    const termsList = document.getElementById('terms-list');
+    if (termsToggle && termsList){
+      termsToggle.addEventListener('click', ()=>{
+        const nowHidden = termsList.classList.toggle('hidden');
+        termsToggle.setAttribute('aria-expanded', String(!nowHidden));
+        termsToggle.textContent = copy[currentLang][ nowHidden ? 'terms.toggle.show' : 'terms.toggle.hide' ];
       });
     }
 
