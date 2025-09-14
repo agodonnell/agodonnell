@@ -65,9 +65,13 @@ contract TradeSettlement {
 
     receive() external payable {}
 }
-This code assumes a lot:
+
+
+function foo() public {}
 
 ---
+
+This code assumes a lot:
 
 - That the buyer confirms honestly  
 - That the product meets expectations  
