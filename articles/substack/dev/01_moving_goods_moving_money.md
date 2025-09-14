@@ -65,9 +65,7 @@ contract TradeSettlement {
 
     receive() external payable {}
 }
-
-
-function foo() public {}
+```
 
 ---
 
