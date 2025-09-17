@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aaron O'Donnell — Digital Asset Strategist</title>
-  <meta name="description" content="Digital Asset Strategist focusing on cross‑border settlement, smart‑contract payments, and stablecoin rails. Finance-trained; data engineering depth; multilingual focus." />
+  <meta name="description" content="Independent research on cross‑border settlement rails and tokenized finance. Macro‑to‑technical insight; clear writing; practical prototypes." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -43,26 +43,12 @@
     h2{font-size:22px;margin:8px 0 10px}
     ul{margin:8px 0 0 18px;color:var(--muted)}
     .footer{margin-top:48px;color:#7b8794;font-size:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-    .logos{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    .logo{font-size:12px;border:1px dashed #243; color:#8fa3b8; padding:6px 8px;border-radius:8px}
-    .small{font-size:13px;color:var(--muted)}
-    .hr{height:1px;background:#1b2027;margin:24px 0}
-    /* terms list */
-    .terms dt{font-weight:600;margin-top:10px}
-    .terms dd{color:var(--muted);margin:4px 0 10px 0}
-    /* articles list */
     .article-list {display:flex;flex-direction:column;gap:12px}
     .article-item a {font-weight:600;font-size:16px}
     .article-item p, .tags {font-size:14px;color:var(--muted)}
-    /* social icons */
     .social a{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;color:var(--text);transition:color .2s ease}
     .social a:hover{color:var(--accent)}
-    /* fitness toggle */
-    .toggle {
-      background:transparent;border:1px solid #263040;color:var(--text);
-      border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer;
-      display:inline-flex;align-items:center;gap:8px
-    }
+    .toggle { background:transparent;border:1px solid #263040;color:var(--text); border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer; display:inline-flex;align-items:center;gap:8px }
     .hidden{display:none}
   </style>
 </head>
@@ -71,11 +57,11 @@
     <header>
       <div>
         <div class="brand">Aaron O'Donnell</div>
-        <div class="framing-line">Digital Asset Strategist focused on settlement infrastructure for cross-border trade and payments.</div>
+        <div class="framing-line" data-i18n="header.tagline"></div>
       </div>
       <nav class="nav">
         <a href="#home" data-i18n="nav.top"></a>
-        <a href="#work" data-i18n="nav.work"></a>
+        <a href="#projects" data-i18n="nav.projects"></a>
         <a href="#about" data-i18n="nav.about"></a>
         <a href="#terms" data-i18n="nav.terms"></a>
         <a href="#fitness" data-i18n="nav.fitness"></a>
@@ -94,7 +80,7 @@
         <p class="lead" data-i18n="hero.sub1"></p>
         <p class="lead" data-i18n="hero.sub2"></p>
         <div class="cta">
-          <a class="btn" href="#work" data-i18n="hero.cta1"></a>
+          <a class="btn" href="#projects" data-i18n="hero.cta1"></a>
           <a class="btn secondary" href="#about" data-i18n="hero.cta2"></a>
         </div>
       </div>
@@ -111,29 +97,24 @@
       </div>
     </section>
 
-    <section id="work" class="grid">
-      <div class="col-6 card">
-        <h2 data-i18n="services.title"></h2>
+    <!-- RESEARCH PROJECTS -->
+    <section id="projects" class="grid">
+      <div class="col-12 card">
+        <h2 data-i18n="research.title"></h2>
         <ul>
-          <li data-i18n="services.item1"></li>
-          <li data-i18n="services.item2"></li>
-          <li data-i18n="services.item3"></li>
-          <li data-i18n="services.item4"></li>
+          <li>
+            <strong data-i18n="research.p1.title"></strong> —
+            <span data-i18n="research.p1.body"></span>
+          </li>
+          <li>
+            <strong data-i18n="research.p2.title"></strong> —
+            <span data-i18n="research.p2.body"></span>
+          </li>
+          <li>
+            <strong data-i18n="research.p3.title"></strong> —
+            <span data-i18n="research.p3.body"></span>
+          </li>
         </ul>
-        <div class="hr"></div>
-        <div class="small" data-i18n="services.disclaimer"></div>
-      </div>
-      <div class="col-6 card">
-        <h2 data-i18n="toolkit.title"></h2>
-        <p class="small" data-i18n="toolkit.sub"></p>
-        <div class="logos">
-          <div class="logo">Visa</div>
-          <div class="logo">Circle (USDC/EURC)</div>
-          <div class="logo">Chainlink</div>
-          <div class="logo">Franklin Templeton</div>
-          <div class="logo">Solana</div>
-          <div class="logo">Sui</div>
-        </div>
       </div>
     </section>
 
@@ -142,7 +123,6 @@
         <h2 data-i18n="about.title"></h2>
         <p data-i18n="about.p1"></p>
         <p data-i18n="about.p2"></p>
-        <p class="small" data-i18n="about.lang"></p>
       </div>
       <div class="col-6 card">
         <h2 data-i18n="posts.title"></h2>
@@ -157,7 +137,7 @@
 
     <!-- TERMS + FITNESS SIDE BY SIDE -->
     <section id="glossary-and-fitness" class="grid">
-      <!-- TERMS (left) -->
+      <!-- TERMS -->
       <div class="col-6 card" id="terms">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
           <h2 style="margin:0" data-i18n="terms.title"></h2>
@@ -166,26 +146,19 @@
 
         <div id="terms-list" class="hidden" role="region" aria-live="polite">
           <dl class="terms">
-            <dt data-i18n="terms.sc.title"></dt>
-            <dd data-i18n="terms.sc.desc"></dd>
-            <dt data-i18n="terms.oracle.title"></dt>
-            <dd data-i18n="terms.oracle.desc"></dd>
-            <dt data-i18n="terms.rail.title"></dt>
-            <dd data-i18n="terms.rail.desc"></dd>
-            <dt data-i18n="terms.l1l2.title"></dt>
-            <dd data-i18n="terms.l1l2.desc"></dd>
-            <dt data-i18n="terms.shill.title"></dt>
-            <dd data-i18n="terms.shill.desc"></dd>
-            <dt data-i18n="terms.token.title"></dt>
-            <dd data-i18n="terms.token.desc"></dd>
+            <dt data-i18n="terms.sc.title"></dt><dd data-i18n="terms.sc.desc"></dd>
+            <dt data-i18n="terms.oracle.title"></dt><dd data-i18n="terms.oracle.desc"></dd>
+            <dt data-i18n="terms.rail.title"></dt><dd data-i18n="terms.rail.desc"></dd>
+            <dt data-i18n="terms.l1l2.title"></dt><dd data-i18n="terms.l1l2.desc"></dd>
+            <dt data-i18n="terms.shill.title"></dt><dd data-i18n="terms.shill.desc"></dd>
+            <dt data-i18n="terms.token.title"></dt><dd data-i18n="terms.token.desc"></dd>
           </dl>
           <div class="hr"></div>
         </div>
-        <!-- Keep the note visible, just like the fitness tagline -->
         <p class="small" data-i18n="terms.note"></p>
       </div>
 
-      <!-- FITNESS (right) with toggle -->
+      <!-- FITNESS -->
       <div class="col-6 card" id="fitness">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
           <h2 style="margin:0" data-i18n="fitness.title"></h2>
@@ -197,37 +170,31 @@
             <p>May 5, 2024 · Fort Collins, CO</p>
             <div class="tags">Time: 03:25:58 · Pace: 7:51/mi · Place: 168 / 1,051 · Percentile: 16.0%</div>
           </div>
-
           <div class="article-item">
             <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">Denver Colfax Marathon</a>
             <p>May 15, 2022 · Denver, CO</p>
             <div class="tags">Time: 04:00:34 · Pace: 9:11/mi · Place: 285 / 1,095 · Percentile: 26.0%</div>
           </div>
-
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/big-d-texas-marathon-8/2012/results" target="_blank" rel="noopener noreferrer">Big-D Texas Marathon</a>
             <p>Apr 15, 2012 · Dallas, TX</p>
             <div class="tags">Time: 03:45:06 · Pace: 8:35/mi · Place: 74 / 689 · Percentile: 10.7%</div>
           </div>
-
           <div class="article-item">
             <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">Denver Colfax Marathon</a>
             <p>May 15, 2011 · Denver, CO</p>
             <div class="tags">Time: 03:36:12 · Pace: 8:14/mi · Place: 109 / 757 · Percentile: 14.4%</div>
           </div>
-
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/rock-n-roll-san-antonio-marathon-and-12-marathon-2/2010/results" target="_blank" rel="noopener noreferrer">Rock 'n' Roll San Antonio Marathon</a>
             <p>Nov 14, 2010 · San Antonio, TX</p>
             <div class="tags">Time: 03:28:39 · Pace: 7:57/mi · Place: 296 / 4,674 · Percentile: 6.3%</div>
           </div>
-
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/austin-marathon-15/2009/results" target="_blank" rel="noopener noreferrer">Austin Marathon</a>
             <p>Feb 15, 2009 · Austin, TX</p>
             <div class="tags">Time: 03:34:46 · Pace: 8:11/mi · Place: 511 / 4,174 · Percentile: 12.2%</div>
           </div>
-
           <div class="article-item">
             <a href="https://www.chevronhoustonmarathon.com/" target="_blank" rel="noopener noreferrer">Chevron Houston Marathon</a>
             <p>Jan 13, 2008 · Houston, TX</p>
@@ -237,34 +204,22 @@
         <p class="small" data-i18n="fitness.tagline"></p>
       </div>
     </section>
-    <!-- /TERMS + FITNESS -->
 
     <section id="contact" class="grid">
       <div class="col-12 card">
         <h2 data-i18n="contact.title"></h2>
         <p class="social">
-          <!-- <a href="mailto:hello@agodonnell.com" aria-label="Email">hello@agodonnell.com</a> -->
           <a href="https://github.com/agodonnell" target="_blank" aria-label="GitHub">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 0.3C5.37 0.3 0 5.67 0 12.3c0 5.28 3.438 9.75 8.207 11.325.6.113.82-.263.82-.582 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.805 1.304 3.492.996.108-.776.42-1.305.763-1.605-2.665-.303-5.466-1.332-5.466-5.932 0-1.31.468-2.383 1.236-3.222-.124-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.99-.399 3.015-.404 1.023.005 2.053.137 3.015.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.805 5.625-5.475 5.922.432.372.816 1.102.816 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.216.699.825.58C20.565 22.047 24 17.577 24 12.3c0-6.63-5.37-12-12-12z"/>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0.3C5.37 0.3 0 5.67 0 12.3c0 5.28 3.438 9.75 8.207 11.325.6.113.82-.263.82-.582 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.805 1.304 3.492.996.108-.776.42-1.305.763-1.605-2.665-.303-5.466-1.332-5.466-5.932 0-1.31.468-2.383 1.236-3.222-.124-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.99-.399 3.015-.404 1.023.005 2.053.137 3.015.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.805 5.625-5.475 5.922.432.372.816 1.102.816 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.216.699.825.58C20.565 22.047 24 17.577 24 12.3c0-6.63-5.37-12-12-12z"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/ag-odonnell-64691ba9/" target="_blank" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4v-10h3v10zm-1.5-11.27c-.96 0-1.75-.79-1.75-1.75S4.54 4.23 5.5 4.23c.97 0 1.75.79 1.75 1.75S6.47 7.73 5.5 7.73zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.97V19h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59V19z"/>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4v-10h3v10zm-1.5-11.27c-.96 0-1.75-.79-1.75-1.75S4.54 4.23 5.5 4.23c.97 0 1.75.79 1.75 1.75S6.47 7.73 5.5 7.73zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.97V19h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59V19z"/></svg>
           </a>
           <a href="https://x.com/agodonnell" target="_blank" aria-label="X (Twitter)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.97 1H18.75L12.42 8.4L6.66 1H0L9.23 12.12L0 23H4.23L10.91 15.17L17.12 23H23.34L13.67 11.4L22.97 1Z"/>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.97 1H18.75L12.42 8.4L6.66 1H0L9.23 12.12L0 23H4.23L10.91 15.17L17.12 23H23.34L13.67 11.4L22.97 1Z"/></svg>
           </a>
           <a href="https://substack.com/@agodonnell" target="_blank" aria-label="Substack">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="3" rx="1"></rect>
-              <rect x="3" y="9" width="18" height="3" rx="1"></rect>
-              <path d="M3 14h18v6l-9-3-9 3v-6z"></path>
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect x="3" y="4" width="18" height="3" rx="1"></rect><rect x="3" y="9" width="18" height="3" rx="1"></rect><path d="M3 14h18v6l-9-3-9 3v-6z"></path></svg>
           </a>
         </p>
       </div>
@@ -280,43 +235,49 @@
   </div>
 
   <script>
-    // i18n copy
     const copy = {
       en: {
+        "header.tagline": "Independent research on settlement infrastructure for cross‑border trade and payments.",
         "nav.top": "Top",
-        "nav.work": "Work",
+        "nav.projects": "Projects",
         "nav.about": "About",
         "nav.contact": "Contact",
         "nav.terms": "Terms",
         "nav.fitness": "Fitness",
+
         "hero.badge": "Digital Asset Strategist",
-        "hero.title": "Settlement infrastructure for cross-border trade and payments",
-        "hero.sub1": "I help exporters, importers, and finance teams move money and assets across borders with smart‑contract settlement, stablecoin rails, and tokenized finance—faster, safer, auditable.",
-        "hero.sub2": "Finance-trained strategist with deep data engineering experience, focused on building and explaining the systems powering this transformation.",
-        "hero.cta1": "See how I work",
+        "hero.title": "Settlement infrastructure for cross‑border trade and payments",
+        "hero.sub1": "I explore the systems enabling cross‑border payments and trade settlement using tokenized assets, stablecoins, and smart contracts—analyzing the rails, risks, and institutional architecture that make real‑world applications possible.",
+        "hero.sub2": "My work bridges macro strategy and technical execution, informed by experience in finance and data engineering—supporting institutions navigating this shift.",
+        "hero.cta1": "See projects",
         "hero.cta2": "About & background",
+
         "focus.title": "Focus",
         "focus.item1": "Smart‑escrow and delivery‑versus‑payment logic for trade",
         "focus.item2": "Stablecoin flows (USDC/EURC) on high‑speed settlement rails",
         "focus.item3": "Comparative guidance across BTC / ETH / SOL / SUI",
-        "focus.item4": "Alignment with institutional infrastructure (Visa, Circle, Chainlink, Franklin Templeton)",
-        "focus.note": "Multilingual engagement.",
-        "services.title": "Services & Engagement",
-        "services.item1": "Advisory onboarding: education, wallet setup, risk mapping",
-        "services.item2": "Implementation: smart‑contract escrow, oracle integrations",
-        "services.item3": "Managed settlement layer: monitoring, reporting, improvements",
-        "services.item4": "Partnership routing: preferred vendors and off‑ramps",
-        "services.disclaimer": "I evaluate options case‑by‑case; I don’t ‘shill’ a single platform.",
-        "toolkit.title": "Toolkit & Platforms",
-        "toolkit.sub": "I build on proven infrastructure providers and public chains.",
+        "focus.item4": "Alignment with institutional-grade infrastructure (Visa, Circle, Chainlink, Fireblocks)",
+
+        "focus.note": "Pragmatic, research‑led focus: use‑case first, vendor‑neutral, measured by latency, cost, and compliance fit.",
+
+        "research.title": "Research Projects & Explorations",
+        "research.p1.title": "Tokenized Recycled‑Metal Marketplace",
+        "research.p1.body": "Digitize verified metal loads (e.g., ISRI categories) with transparent provenance, quality attestations, and dual‑sided reputation to improve price discovery, credit terms, and post‑trade settlement.",
+        "research.p2.title": "Settlement‑Layer Architectures",
+        "research.p2.body": "Compare escrow and DvP flows across chains (e.g., Solana, Ethereum) and oracles—latency, fees, compliance hooks, reporting, and auditability.",
+        "research.p3.title": "Institutional Adoption Models",
+        "research.p3.body": "Study go‑to‑market patterns for stablecoin rails and tokenized assets—where Visa, Circle, and partners reduce friction and where gaps remain.",
+
         "about.title": "About",
-        "about.p1": "Previously: Supported cross‑border financial relationships across Latin America while at JPMorgan and Merrill Lynch, gaining exposure to trade financing, capital flows, and institutional operations in the region.",
+        "about.p1": "Previously supported cross‑border financial relationships across Latin America while at JPMorgan and Merrill Lynch, gaining exposure to trade financing, capital flows, and institutional operations.",
         "about.p2": "I publish practical research on digital settlement rails and compare leading protocols as financial infrastructure.",
-        "about.lang": "Languages: English; Spanish (professional). French & German in development.",
+        "about.lang": "Curious about where the world is building—and how systems take shape across borders.",
+
         "posts.title": "Recent Writing",
         "posts.item1": "Prime Digital Assets as Financial Infrastructure (coming soon)",
         "posts.item2": "Who’s Building the Rails: Visa, Circle, Chainlink, Franklin (coming soon)",
-        "posts.note": "Substack launching shortly. Bilingual posts (EN/ES).",
+        "posts.note": "Substack launching shortly.",
+
         "terms.title": "Key terms, in plain English",
         "terms.note": "No need to speak blockchain to benefit from it.",
         "terms.sc.title": "Smart‑contract escrow",
@@ -328,73 +289,83 @@
         "terms.l1l2.title": "Layer 1 / Layer 2",
         "terms.l1l2.desc": "Base blockchain (L1) vs performance layers on top (L2) — think highways and express lanes.",
         "terms.shill.title": "Shill",
-        "terms.shill.desc": "Someone who promotes a product, token, or project in a biased or misleading way, often without disclosing a financial interest. In short: hype without transparency. (Origin: carnival/show-business slang for a planted accomplice who feigns enthusiasm; later adopted in finance/crypto.)",
+        "terms.shill.desc": "Someone who promotes a product or token in a biased way, often without disclosing a financial interest.",
         "terms.token.title": "Tokenized asset",
         "terms.token.desc": "A traditional asset (like a fund or T‑bill) represented digitally on a blockchain.",
         "terms.toggle.show": "Show glossary",
         "terms.toggle.hide": "Hide glossary",
+
         "fitness.title": "Endurance Efforts",
         "fitness.tagline": "Proud to always work for the PR.",
         "fitness.toggle.show": "Show races",
         "fitness.toggle.hide": "Hide races",
+
         "contact.title": "Get in touch",
         "footer.rights": "All rights reserved."
       },
       es: {
+        "header.tagline": "Investigación independiente sobre la infraestructura de liquidación para comercio y pagos transfronterizos.",
         "nav.top": "Inicio",
-        "nav.work": "Servicios",
+        "nav.projects": "Proyectos",
         "nav.about": "Perfil",
         "nav.contact": "Contacto",
         "nav.terms": "Glosario",
         "nav.fitness": "Fitness",
+
         "hero.badge": "Estratega de Activos Digitales",
         "hero.title": "Infraestructura de liquidación para comercio y pagos transfronterizos",
-        "hero.sub1": "Ayudo a exportadores, importadores y equipos financieros a mover dinero y activos a través de fronteras con liquidación en contratos inteligentes, rieles de stablecoins y finanzas tokenizadas—más rápido, seguro y auditable.",
-        "hero.sub2": "Estratega con formación en finanzas y amplia experiencia en ingeniería de datos, enfocado en construir y explicar los sistemas que impulsan esta transformación.",
-        "hero.cta1": "Cómo trabajo",
+        "hero.sub1": "Exploro los sistemas que habilitan pagos y liquidación comercial transfronterizos con activos tokenizados, stablecoins y contratos inteligentes—analizando rieles, riesgos y arquitectura institucional que permiten casos reales.",
+        "hero.sub2": "Mi trabajo conecta la estrategia macro con la ejecución técnica, apoyado por experiencia en finanzas e ingeniería de datos—acompañando a instituciones en esta transición.",
+        "hero.cta1": "Ver proyectos",
         "hero.cta2": "Perfil y trayectoria",
+
         "focus.title": "Enfoque",
-        "focus.item1": "Escrow inteligente y lógica de entrega‑contra‑pago para comercio",
+        "focus.item1": "Escrow inteligente y lógica de entrega‑contra‑pago",
         "focus.item2": "Flujos con stablecoins (USDC/EURC) en rieles de alta velocidad",
         "focus.item3": "Guía comparativa entre BTC / ETH / SOL / SUI",
-        "focus.item4": "Alineación con infraestructura institucional (Visa, Circle, Chainlink, Franklin Templeton)",
-        "focus.note": "Enfoque multilingüe.",
-        "services.title": "Servicios y Modalidades",
-        "services.item1": "Onboarding estratégico: educación, wallets, mapa de riesgos",
-        "services.item2": "Implementación: escrow con contratos inteligentes y oráculos",
-        "services.item3": "Capa de liquidación gestionada: monitoreo, reporting, mejoras",
-        "services.item4": "Enrutamiento con socios: proveedores y off‑ramps preferidos",
-        "services.disclaimer": "Evalúo opciones caso por caso; no ‘promociono’ una sola plataforma.",
-        "toolkit.title": "Herramientas y Plataformas",
-        "toolkit.sub": "Trabajo sobre proveedores de infraestructura probados y cadenas públicas.",
+        "focus.item4": "Alineación con infraestructura de nivel institucional (Visa, Circle, Chainlink, Fireblocks)",
+        "focus.note": "Enfoque pragmático y guiado por investigación: casos de uso primero, neutralidad de proveedor, medido por latencia, costo y cumplimiento.",
+
+        "research.title": "Proyectos e Investigaciones",
+        "research.p1.title": "Mercado Tokenizado de Chatarra Metálica",
+        "research.p1.body": "Digitalizar cargas verificadas (p. ej., categorías ISRI) con procedencia, atestaciones de calidad y reputación bilateral para mejorar descubrimiento de precios, crédito y liquidación post‑trade.",
+        "research.p2.title": "Arquitecturas de Capa de Liquidación",
+        "research.p2.body": "Comparar flujos de escrow y DvP entre cadenas (Solana, Ethereum) y oráculos—latencia, costos, cumplimiento, reporting y auditabilidad.",
+        "research.p3.title": "Modelos de Adopción Institucional",
+        "research.p3.body": "Estudiar el go‑to‑market de rieles con stablecoins y activos tokenizados—dónde Visa, Circle y socios reducen fricción y dónde persisten brechas.",
+
         "about.title": "Perfil",
-        "about.p1": "Experiencia apoyando relaciones financieras transfronterizas en América Latina en JPMorgan y Merrill Lynch, con exposición a financiamiento de comercio, flujos de capital y operaciones institucionales.",
-        "about.p2": "Publico análisis prácticos sobre rieles de liquidación digital y comparo protocolos líderes como infraestructura financiera.",
-        "about.lang": "Idiomas: inglés; español (profesional). Francés y alemán en desarrollo.",
+        "about.p1": "Anteriormente apoyé relaciones financieras transfronterizas en América Latina en JPMorgan y Merrill Lynch, con exposición a financiamiento de comercio, flujos de capital y operaciones institucionales.",
+        "about.p2": "Publico investigación práctica sobre rieles de liquidación digital y comparo protocolos líderes como infraestructura financiera.",
+        "about.lang": "Curioso sobre dónde se está construyendo el futuro y cómo toman forma los sistemas a través de las fronteras.",
+
         "posts.title": "Escritura reciente",
-        "posts.item1": "Activos digitales clave como infraestructura financiera (próximamente)",
-        "posts.item2": "Quién construye los rieles: Visa, Circle, Chainlink, Franklin (próximamente)",
-        "posts.note": "Substack próximamente. Publicaciones bilingües (EN/ES).",
+        "posts.item1": "Activos Digitales Clave como Infraestructura Financiera (próximamente)",
+        "posts.item2": "Quién Construye los Rieles: Visa, Circle, Chainlink, Franklin (próximamente)",
+        "posts.note": "Substack próximamente.",
+
         "terms.title": "Términos clave, en lenguaje claro",
-        "terms.note": "No es necesario hablar ‘blockchain’ para aprovechar sus beneficios.",
+        "terms.note": "No es necesario hablar ‘blockchain’ para aprovecharla.",
         "terms.sc.title": "Escrow con contratos inteligentes",
-        "terms.sc.desc": "Los fondos se mantienen y se liberan automáticamente cuando se cumplen las condiciones acordadas (por ejemplo, entrega confirmada).",
+        "terms.sc.desc": "Los fondos se mantienen y liberan automáticamente cuando se cumplen las condiciones acordadas (p. ej., entrega confirmada).",
         "terms.oracle.title": "Oráculo",
-        "terms.oracle.desc": "Fuente de datos confiable que conecta los contratos con información del mundo real (entrega, precios, cumplimiento).",
+        "terms.oracle.desc": "Fuente de datos confiable que conecta contratos con información del mundo real.",
         "terms.rail.title": "Riel de stablecoins",
-        "terms.rail.desc": "Sistema rápido y programable para mover dólares tokenizados (por ejemplo, USDC en Solana).",
+        "terms.rail.desc": "Sistema rápido y programable para mover dólares tokenizados (p. ej., USDC en Solana).",
         "terms.l1l2.title": "Capa 1 / Capa 2",
-        "terms.l1l2.desc": "Cadena base (C1) frente a capas de rendimiento por encima (C2) — como autopistas y carriles exprés.",
+        "terms.l1l2.desc": "Cadena base (C1) frente a capas de rendimiento (C2).",
         "terms.shill.title": "Shill",
-        "terms.shill.desc": "Persona que promociona un producto, token o proyecto de forma sesgada o engañosa, a menudo sin revelar su interés económico. En resumen: ‘hype’ sin transparencia. (Origen: jerga de ferias/espectáculos para un “cómplice” colocado en la audiencia que finge entusiasmo; luego adoptado en finanzas/cripto.)",
+        "terms.shill.desc": "Quien promociona un producto o token de forma sesgada sin transparencia.",
         "terms.token.title": "Activo tokenizado",
-        "terms.token.desc": "Un activo tradicional (como un fondo o un T‑bill) representado de forma digital en una blockchain.",
+        "terms.token.desc": "Un activo tradicional representado digitalmente en una blockchain.",
         "terms.toggle.show": "Ver glosario",
         "terms.toggle.hide": "Ocultar glosario",
+
         "fitness.title": "Esfuerzos de resistencia",
-        "fitness.tagline": "Orgulloso de siempre trabajar por mi mejor marca.",
+        "fitness.tagline": "Orgulloso de trabajar siempre por mi mejor marca.",
         "fitness.toggle.show": "Ver carreras",
         "fitness.toggle.hide": "Ocultar carreras",
+
         "contact.title": "Contacto",
         "footer.rights": "Todos los derechos reservados."
       }
@@ -414,18 +385,13 @@
       if (btn) btn.classList.add('active');
       document.documentElement.lang = lang;
 
-      // Update fitness toggle label to match language + current state
-      const toggle = document.getElementById('fitness-toggle');
-      const list = document.getElementById('fitness-list');
-      if (toggle && list) {
-        toggle.textContent = copy[lang][ list.classList.contains('hidden') ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
-      }
-      // Update terms toggle label to match language + current state
-      const tToggle = document.getElementById('terms-toggle');
-      const tList = document.getElementById('terms-list');
-      if (tToggle && tList) {
-        tToggle.textContent = copy[lang][ tList.classList.contains('hidden') ? 'terms.toggle.show' : 'terms.toggle.hide' ];
-      }
+      const ft = document.getElementById('fitness-toggle');
+      const fl = document.getElementById('fitness-list');
+      if (ft && fl) ft.textContent = copy[lang][ fl.classList.contains('hidden') ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
+
+      const tt = document.getElementById('terms-toggle');
+      const tl = document.getElementById('terms-list');
+      if (tt && tl) tt.textContent = copy[lang][ tl.classList.contains('hidden') ? 'terms.toggle.show' : 'terms.toggle.hide' ];
     }
 
     document.getElementById('lang-en').onclick = ()=>setLang('en');
