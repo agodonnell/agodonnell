@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aaron O'Donnell — Digital Asset Strategist</title>
-  <meta name="description" content="Independent research on cross‑border settlement rails and tokenized finance. Macro‑to‑technical insight; clear writing; practical prototypes." />
+  <meta name="description" content="Modernize data infrastructure and sensor flows to make better decisions today and prepare for tokenization tomorrow." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -50,6 +50,7 @@
     .social a:hover{color:var(--accent)}
     .toggle { background:transparent;border:1px solid #263040;color:var(--text); border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer; display:inline-flex;align-items:center;gap:8px }
     .hidden{display:none}
+    .hr{height:1px;background:#1c222a;margin:14px 0}
   </style>
 </head>
 <body>
@@ -97,8 +98,20 @@
       </div>
     </section>
 
-    <!-- RESEARCH PROJECTS -->
+    <!-- SERVICES / PROJECTS -->
     <section id="projects" class="grid">
+      <div class="col-12 card">
+        <h2>How I Work</h2>
+        <ul>
+          <li><strong>Assess:</strong> Understand your current data, systems, and business priorities.</li>
+          <li><strong>Roadmap:</strong> Define a practical modernization path — from quick wins to long-term possibilities.</li>
+          <li><strong>Build:</strong> Improve pipelines, dashboards, and integrations (Snowflake, Databricks, etc.).</li>
+          <li><strong>Extend:</strong> Where useful, explore tokenized flows (e.g., escrow, credits, ownership) tied to real assets.</li>
+        </ul>
+        <div class="hr"></div>
+        <p class="small">Simple, phased, and grounded in the real world. If you're starting from spreadsheets, that's okay.</p>
+      </div>
+
       <div class="col-12 card">
         <h2 data-i18n="research.title"></h2>
         <ul>
@@ -237,63 +250,68 @@
   <script>
     const copy = {
       en: {
-        "header.tagline": "Independent research on settlement infrastructure for cross‑border trade and payments.",
+        "header.tagline": "Modernizing data and operational flows for real assets with a path to tokenization.",
         "nav.top": "Top",
-        "nav.projects": "Projects",
+        "nav.projects": "Services",
         "nav.about": "About",
         "nav.contact": "Contact",
         "nav.terms": "Terms",
         "nav.fitness": "Fitness",
 
         "hero.badge": "Digital Asset Strategist",
-        "hero.title": "Settlement infrastructure for cross‑border trade and payments",
-        "hero.sub1": "I explore the systems enabling cross‑border payments and trade settlement using tokenized assets, stablecoins, and smart contracts—analyzing the rails, risks, and institutional architecture that make real‑world applications possible.",
-        "hero.sub2": "My work bridges macro strategy and technical execution, informed by experience in finance and data engineering—supporting institutions navigating this shift.",
-        "hero.cta1": "See projects",
-        "hero.cta2": "About & background",
+        "hero.title": "Infrastructure first. Tokenization when it matters.",
+        "hero.sub1": "I assist real‑world businesses in modernizing data infrastructure and integrating operational signals (e.g., sensors, system logs, external data) when relevant—so decisions are faster, cheaper, and auditable.",
+        "hero.sub2": "When the foundation is in place, we explore tokenized ownership and smart‑contract flows where they add real value.",
+        "hero.cta1": "What I do",
+        "hero.cta2": "Background",
 
-        "focus.title": "Focus",
-        "focus.item1": "Smart‑escrow and delivery‑versus‑payment logic for trade",
-        "focus.item2": "Stablecoin flows (USDC/EURC) on high‑speed settlement rails",
-        "focus.item3": "Comparative guidance across BTC / ETH / SOL / SUI",
-        "focus.item4": "Alignment with institutional-grade infrastructure (Visa, Circle, Chainlink, Fireblocks)",
+        "focus.title": "Where I typically assist",
+        "focus.item1": "Data & pipeline cleanup (Snowflake/Databricks/SQL/Python) — dashboards that leaders actually use",
+        "focus.item2": "Operational signals → Data → Decision (e.g., sensors, system logs, external feeds): occupancy, energy, equipment, logistics, risk",
+        "focus.item3": "Reporting for compliance/insurance: emissions, incidents, maintenance",
+        "focus.item4": "Tokenization readiness: rights, revenue streams, credits, escrow",
+        "focus.note": "Industries: real estate, sustainability/energy, insurance & risk, recycling/commodities.",
 
-        "focus.note": "Pragmatic, research‑led focus: use‑case first, vendor‑neutral, measured by latency, cost, and compliance fit.",
-
-        "research.title": "Research Projects & Explorations",
-        "research.p1.title": "Tokenized Recycled‑Metal Marketplace",
-        "research.p1.body": "Digitize verified metal loads (e.g., ISRI categories) with transparent provenance, quality attestations, and dual‑sided reputation to improve price discovery, credit terms, and post‑trade settlement.",
-        "research.p2.title": "Settlement‑Layer Architectures",
-        "research.p2.body": "Compare escrow and DvP flows across chains (e.g., Solana, Ethereum) and oracles—latency, fees, compliance hooks, reporting, and auditability.",
-        "research.p3.title": "Institutional Adoption Models",
-        "research.p3.body": "Study go‑to‑market patterns for stablecoin rails and tokenized assets—where Visa, Circle, and partners reduce friction and where gaps remain.",
+        "research.title": "Services & example projects",
+        "research.p1.title": "Real Estate modernization → tokenized incentives",
+        "research.p1.body": "Unify leases, energy, and maintenance data; add sensors for anomalies; later pilot credits or shared‑savings tokens tied to reductions.",
+        "research.p2.title": "Insurance risk with operational signals (IoT optional)",
+        "research.p2.body": "Use leak/temperature/vibration sensors or system telemetry to reduce losses and document risk; evaluate parametric or usage‑based models.",
+        "research.p3.title": "Recycled‑metal provenance",
+        "research.p3.body": "Standardize load data (ISRI), capture quality proofs, then test tokenized claims or escrow for faster settlement.",
 
         "about.title": "About",
-        "about.p1": "Previously supported cross‑border financial relationships across Latin America while at JPMorgan and Merrill Lynch, gaining exposure to trade financing, capital flows, and institutional operations.",
-        "about.p2": "I publish practical research on digital settlement rails and compare leading protocols as financial infrastructure.",
-        "about.lang": "Curious about where the world is building—and how systems take shape across borders.",
+        "about.p1": "Previously: supported cross‑border financial relationships across Latin America at JPMorgan and Merrill Lynch, gaining exposure to trade financing, capital flows, and institutional operations.",
+        "about.p2": "Now: blending data engineering with strategy to assist physical‑asset businesses in modernizing today and preparing for tokenization tomorrow.",
 
         "posts.title": "Recent Writing",
-        "posts.item1": "Prime Digital Assets as Financial Infrastructure (coming soon)",
-        "posts.item2": "Who’s Building the Rails: Visa, Circle, Chainlink, Franklin (coming soon)",
+        "posts.item1": "Infrastructure first: a humane path to tokenization (soon)",
+        "posts.item2": "Sensors, insurance, and parametric triggers (soon)",
         "posts.note": "Substack launching shortly.",
 
         "terms.title": "Key terms, in plain English",
         "terms.note": "No need to speak blockchain to benefit from it.",
         "terms.sc.title": "Smart‑contract escrow",
-        "terms.sc.desc": "Funds are held and automatically released when agreed conditions are met (e.g., delivery confirmed).",
+        "terms.sc.desc": "Funds are held and auto‑released when agreed conditions are met (e.g., delivery confirmed).",
         "terms.oracle.title": "Oracle",
-        "terms.oracle.desc": "A trusted data feed that connects contracts to real‑world information (delivery, prices, compliance).",
+        "terms.oracle.desc": "A trusted feed that connects contracts to real‑world info (delivery, prices, compliance).",
         "terms.rail.title": "Stablecoin rail",
-        "terms.rail.desc": "A fast, programmable system for moving tokenized dollars (e.g., USDC on Solana).",
+        "terms.rail.desc": "A fast, programmable system for moving tokenized dollars (e.g., USDC).",
         "terms.l1l2.title": "Layer 1 / Layer 2",
-        "terms.l1l2.desc": "Base blockchain (L1) vs performance layers on top (L2) — think highways and express lanes.",
+        "terms.l1l2.desc": "Base blockchain (L1) vs. performance layers on top (L2).",
         "terms.shill.title": "Shill",
-        "terms.shill.desc": "Someone who promotes a product or token in a biased way, often without disclosing a financial interest.",
+        "terms.shill.desc": "Someone who promotes in a biased way without disclosing interest.",
         "terms.token.title": "Tokenized asset",
-        "terms.token.desc": "A traditional asset (like a fund or T‑bill) represented digitally on a blockchain.",
+        "terms.token.desc": "A traditional asset (e.g., T‑bill, fund, property right) represented on a blockchain.",
         "terms.toggle.show": "Show glossary",
         "terms.toggle.hide": "Hide glossary",
+
+        "engage.title": "How I Work",
+        "engage.step1": "Assess: Understand your current data, systems, and business priorities.",
+        "engage.step2": "Roadmap: Define a practical modernization path — from quick wins to long-term possibilities.",
+        "engage.step3": "Build: Improve pipelines, dashboards, and integrations (Snowflake, Databricks, etc.).",
+        "engage.step4": "Extend: Where useful, explore tokenized flows (e.g., escrow, credits, ownership) tied to real assets.",
+        "engage.note": "Simple, phased, and grounded in the real world. If you're starting from spreadsheets, that's okay.",
 
         "fitness.title": "Endurance Efforts",
         "fitness.tagline": "Proud to always work for the PR.",
@@ -304,62 +322,68 @@
         "footer.rights": "All rights reserved."
       },
       es: {
-        "header.tagline": "Investigación independiente sobre la infraestructura de liquidación para comercio y pagos transfronterizos.",
+        "header.tagline": "Modernizo datos y flujos operativos para activos reales — con una vía hacia la tokenización.",
         "nav.top": "Inicio",
-        "nav.projects": "Proyectos",
+        "nav.projects": "Servicios",
         "nav.about": "Perfil",
         "nav.contact": "Contacto",
         "nav.terms": "Glosario",
         "nav.fitness": "Fitness",
 
         "hero.badge": "Estratega de Activos Digitales",
-        "hero.title": "Infraestructura de liquidación para comercio y pagos transfronterizos",
-        "hero.sub1": "Exploro los sistemas que habilitan pagos y liquidación comercial transfronterizos con activos tokenizados, stablecoins y contratos inteligentes—analizando rieles, riesgos y arquitectura institucional que permiten casos reales.",
-        "hero.sub2": "Mi trabajo conecta la estrategia macro con la ejecución técnica, apoyado por experiencia en finanzas e ingeniería de datos—acompañando a instituciones en esta transición.",
-        "hero.cta1": "Ver proyectos",
-        "hero.cta2": "Perfil y trayectoria",
+        "hero.title": "Infraestructura primero. Tokenización cuando aporta valor.",
+        "hero.sub1": "Asisto a empresas del mundo físico a modernizar su infraestructura de datos e integrar señales operativas (p. ej., sensores, registros de sistemas, datos externos) cuando sea pertinente para decidir más rápido, con menor costo y trazabilidad.",
+        "hero.sub2": "Con la base lista, exploramos propiedad tokenizada y flujos con contratos inteligentes donde tengan impacto real.",
+        "hero.cta1": "Qué hago",
+        "hero.cta2": "Trayectoria",
 
-        "focus.title": "Enfoque",
-        "focus.item1": "Escrow inteligente y lógica de entrega‑contra‑pago",
-        "focus.item2": "Flujos con stablecoins (USDC/EURC) en rieles de alta velocidad",
-        "focus.item3": "Guía comparativa entre BTC / ETH / SOL / SUI",
-        "focus.item4": "Alineación con infraestructura de nivel institucional (Visa, Circle, Chainlink, Fireblocks)",
-        "focus.note": "Enfoque pragmático y guiado por investigación: casos de uso primero, neutralidad de proveedor, medido por latencia, costo y cumplimiento.",
+        "focus.title": "Dónde suelo asistir",
+        "focus.item1": "Limpieza de datos y pipelines (Snowflake/Databricks/SQL/Python) — tableros que se usan de verdad",
+        "focus.item2": "Señales operativas → Dato → Decisión (p. ej., sensores, logs de sistemas, fuentes externas): ocupación, energía, equipos, logística, riesgo",
+        "focus.item3": "Reporting para cumplimiento/seguros: emisiones, incidentes, mantenimiento",
+        "focus.item4": "Preparación para tokenización: derechos, flujos de ingresos, créditos, escrow",
+        "focus.note": "Industrias: inmobiliario, sostenibilidad/energía, seguros y riesgo, reciclaje/commodities.",
 
-        "research.title": "Proyectos e Investigaciones",
-        "research.p1.title": "Mercado Tokenizado de Chatarra Metálica",
-        "research.p1.body": "Digitalizar cargas verificadas (p. ej., categorías ISRI) con procedencia, atestaciones de calidad y reputación bilateral para mejorar descubrimiento de precios, crédito y liquidación post‑trade.",
-        "research.p2.title": "Arquitecturas de Capa de Liquidación",
-        "research.p2.body": "Comparar flujos de escrow y DvP entre cadenas (Solana, Ethereum) y oráculos—latencia, costos, cumplimiento, reporting y auditabilidad.",
-        "research.p3.title": "Modelos de Adopción Institucional",
-        "research.p3.body": "Estudiar el go‑to‑market de rieles con stablecoins y activos tokenizados—dónde Visa, Circle y socios reducen fricción y dónde persisten brechas.",
+        "research.title": "Servicios y proyectos ejemplo",
+        "research.p1.title": "Inmobiliario: modernización → incentivos tokenizados",
+        "research.p1.body": "Unificar datos de arrendamientos, energía y mantenimiento; añadir sensores; luego pilotos de tokens por ahorro o créditos verdes.",
+        "research.p2.title": "Riesgo en seguros con señales operativas (IoT opcional)",
+        "research.p2.body": "Sensores de fuga/temperatura/vibración o telemetría de sistemas para reducir pérdidas y documentar riesgo; evaluar modelos paramétricos o por uso.",
+        "research.p3.title": "Proveniencia de chatarra metálica",
+        "research.p3.body": "Estandarizar datos (ISRI), capturar pruebas de calidad y probar reclamos/escrow tokenizados para liquidación más rápida.",
 
         "about.title": "Perfil",
-        "about.p1": "Anteriormente apoyé relaciones financieras transfronterizas en América Latina en JPMorgan y Merrill Lynch, con exposición a financiamiento de comercio, flujos de capital y operaciones institucionales.",
-        "about.p2": "Publico investigación práctica sobre rieles de liquidación digital y comparo protocolos líderes como infraestructura financiera.",
-        "about.lang": "Curioso sobre dónde se está construyendo el futuro y cómo toman forma los sistemas a través de las fronteras.",
+        "about.p1": "Antes: apoyé relaciones financieras transfronterizas en América Latina (JPMorgan/Merrill), con exposición a financiamiento de comercio y flujos de capital.",
+        "about.p2": "Ahora: combino ingeniería de datos y estrategia para modernizar hoy y preparar la tokenización de mañana.",
 
         "posts.title": "Escritura reciente",
-        "posts.item1": "Activos Digitales Clave como Infraestructura Financiera (próximamente)",
-        "posts.item2": "Quién Construye los Rieles: Visa, Circle, Chainlink, Franklin (próximamente)",
+        "posts.item1": "Infraestructura primero: una vía humana a la tokenización (pronto)",
+        "posts.item2": "Sensores, seguros y disparadores paramétricos (pronto)",
         "posts.note": "Substack próximamente.",
 
         "terms.title": "Términos clave, en lenguaje claro",
         "terms.note": "No es necesario hablar ‘blockchain’ para aprovecharla.",
         "terms.sc.title": "Escrow con contratos inteligentes",
-        "terms.sc.desc": "Los fondos se mantienen y liberan automáticamente cuando se cumplen las condiciones acordadas (p. ej., entrega confirmada).",
+        "terms.sc.desc": "Fondos retenidos y liberados automáticamente cuando se cumplen condiciones.",
         "terms.oracle.title": "Oráculo",
-        "terms.oracle.desc": "Fuente de datos confiable que conecta contratos con información del mundo real.",
+        "terms.oracle.desc": "Fuente confiable que conecta contratos con información del mundo real.",
         "terms.rail.title": "Riel de stablecoins",
-        "terms.rail.desc": "Sistema rápido y programable para mover dólares tokenizados (p. ej., USDC en Solana).",
+        "terms.rail.desc": "Sistema rápido y programable para mover dólares tokenizados (p. ej., USDC).",
         "terms.l1l2.title": "Capa 1 / Capa 2",
-        "terms.l1l2.desc": "Cadena base (C1) frente a capas de rendimiento (C2).",
+        "terms.l1l2.desc": "Cadena base (C1) vs capas de rendimiento (C2).",
         "terms.shill.title": "Shill",
-        "terms.shill.desc": "Quien promociona un producto o token de forma sesgada sin transparencia.",
+        "terms.shill.desc": "Promoción sesgada sin revelar interés.",
         "terms.token.title": "Activo tokenizado",
-        "terms.token.desc": "Un activo tradicional representado digitalmente en una blockchain.",
+        "terms.token.desc": "Activo tradicional representado en blockchain.",
         "terms.toggle.show": "Ver glosario",
         "terms.toggle.hide": "Ocultar glosario",
+
+        "engage.title": "Cómo trabajo",
+        "engage.step1": "Evaluación: Comprender tus datos, sistemas y prioridades empresariales actuales.",
+        "engage.step2": "Ruta: Definir un plan de modernización práctico — desde victorias rápidas hasta pasos futuros.",
+        "engage.step3": "Implementar: Mejorar pipelines, tableros e integraciones (Snowflake, Databricks, etc.).",
+        "engage.step4": "Extender: Donde sea útil, explorar flujos tokenizados (escrow, créditos, propiedad) vinculados a activos reales.",
+        "engage.note": "Enfoque simple, por fases y basado en la realidad. Si partes de hojas de cálculo, no pasa nada.",
 
         "fitness.title": "Esfuerzos de resistencia",
         "fitness.tagline": "Orgulloso de trabajar siempre por mi mejor marca.",
