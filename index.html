@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aaron O'Donnell — Digital Asset Strategist</title>
-  <meta name="description" content="Modernize data infrastructure and sensor flows to make better decisions today and prepare for tokenization tomorrow." />
+  <meta name="description" content="Exploring the systems behind tokenized settlement, data infrastructure, and AI—focused on real-world applications across borders." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -248,9 +248,15 @@
   </div>
 
   <script>
+    // ---- Substack config (change here, not in HTML) ----
+    const SUBSTACK_HOME = "https://agodonnell.substack.com/";
+    const SUBSTACK_MANIFESTO_URL = "https://agodonnell.substack.com/p/the-infrastructure-era-is-already-here";
+    const SUBSTACK_MANIFESTO_TITLE_EN = "The Infrastructure Era Is Already Here";
+    const SUBSTACK_MANIFESTO_TITLE_ES = "La era de la infraestructura ya está aquí";
+
     const copy = {
       en: {
-        "header.tagline": "Modernizing data and operational flows for real assets with a path to tokenization.",
+        "header.tagline": "Exploring the systems behind tokenized settlement, data, and AI.",
         "nav.top": "Top",
         "nav.projects": "Services",
         "nav.about": "About",
@@ -260,8 +266,8 @@
 
         "hero.badge": "Digital Asset Strategist",
         "hero.title": "Infrastructure first. Tokenization when it matters.",
-        "hero.sub1": "I assist real‑world businesses in modernizing data infrastructure and integrating operational signals (e.g., sensors, system logs, external data) when relevant—so decisions are faster, cheaper, and auditable.",
-        "hero.sub2": "When the foundation is in place, we explore tokenized ownership and smart‑contract flows where they add real value.",
+        "hero.sub1": "I assist real-world businesses in modernizing data infrastructure and integrating operational signals (e.g., sensors, system logs, external data) when relevant—so decisions are faster, cheaper, and auditable.",
+        "hero.sub2": "When the foundation is in place, we explore tokenized ownership and smart-contract flows where they add real value.",
         "hero.cta1": "What I do",
         "hero.cta2": "Background",
 
@@ -274,27 +280,27 @@
 
         "research.title": "Services & example projects",
         "research.p1.title": "Real Estate modernization → tokenized incentives",
-        "research.p1.body": "Unify leases, energy, and maintenance data; add sensors for anomalies; later pilot credits or shared‑savings tokens tied to reductions.",
+        "research.p1.body": "Unify leases, energy, and maintenance data; add sensors for anomalies; later pilot credits or shared-savings tokens tied to reductions.",
         "research.p2.title": "Insurance risk with operational signals (IoT optional)",
-        "research.p2.body": "Use leak/temperature/vibration sensors or system telemetry to reduce losses and document risk; evaluate parametric or usage‑based models.",
-        "research.p3.title": "Recycled‑metal provenance",
+        "research.p2.body": "Use leak/temperature/vibration sensors or system telemetry to reduce losses and document risk; evaluate parametric or usage-based models.",
+        "research.p3.title": "Recycled-metal provenance",
         "research.p3.body": "Standardize load data (ISRI), capture quality proofs, then test tokenized claims or escrow for faster settlement.",
 
         "about.title": "About",
-        "about.p1": "Previously: supported cross‑border financial relationships across Latin America at JPMorgan and Merrill Lynch, gaining exposure to trade financing, capital flows, and institutional operations.",
-        "about.p2": "Now: blending data engineering with strategy to assist physical‑asset businesses in modernizing today and preparing for tokenization tomorrow.",
+        "about.p1": "Previously: supported cross-border financial relationships across Latin America at JPMorgan and Merrill Lynch, gaining exposure to trade financing, capital flows, and institutional operations.",
+        "about.p2": "Now: blending data engineering with strategy to assist physical-asset businesses in modernizing today and preparing for tokenization tomorrow.",
 
         "posts.title": "Recent Writing",
-        "posts.item1": "Infrastructure first: a humane path to tokenization (soon)",
-        "posts.item2": "Sensors, insurance, and parametric triggers (soon)",
-        "posts.note": "Substack launching shortly.",
+        "posts.item1": "The Infrastructure Era Is Already Here",
+        "posts.item2": "Follow on Substack",
+        "posts.note": "New essays posted on Substack.",
 
         "terms.title": "Key terms, in plain English",
         "terms.note": "No need to speak blockchain to benefit from it.",
-        "terms.sc.title": "Smart‑contract escrow",
-        "terms.sc.desc": "Funds are held and auto‑released when agreed conditions are met (e.g., delivery confirmed).",
+        "terms.sc.title": "Smart-contract escrow",
+        "terms.sc.desc": "Funds are held and auto-released when agreed conditions are met (e.g., delivery confirmed).",
         "terms.oracle.title": "Oracle",
-        "terms.oracle.desc": "A trusted feed that connects contracts to real‑world info (delivery, prices, compliance).",
+        "terms.oracle.desc": "A trusted feed that connects contracts to real-world info (delivery, prices, compliance).",
         "terms.rail.title": "Stablecoin rail",
         "terms.rail.desc": "A fast, programmable system for moving tokenized dollars (e.g., USDC).",
         "terms.l1l2.title": "Layer 1 / Layer 2",
@@ -302,7 +308,7 @@
         "terms.shill.title": "Shill",
         "terms.shill.desc": "Someone who promotes in a biased way without disclosing interest.",
         "terms.token.title": "Tokenized asset",
-        "terms.token.desc": "A traditional asset (e.g., T‑bill, fund, property right) represented on a blockchain.",
+        "terms.token.desc": "A traditional asset (e.g., T-bill, fund, property right) represented on a blockchain.",
         "terms.toggle.show": "Show glossary",
         "terms.toggle.hide": "Hide glossary",
 
@@ -322,7 +328,7 @@
         "footer.rights": "All rights reserved."
       },
       es: {
-        "header.tagline": "Modernizo datos y flujos operativos para activos reales — con una vía hacia la tokenización.",
+        "header.tagline": "Explorando los sistemas detrás de la liquidación tokenizada, los datos y la IA.",
         "nav.top": "Inicio",
         "nav.projects": "Servicios",
         "nav.about": "Perfil",
@@ -357,9 +363,9 @@
         "about.p2": "Ahora: combino ingeniería de datos y estrategia para modernizar hoy y preparar la tokenización de mañana.",
 
         "posts.title": "Escritura reciente",
-        "posts.item1": "Infraestructura primero: una vía humana a la tokenización (pronto)",
-        "posts.item2": "Sensores, seguros y disparadores paramétricos (pronto)",
-        "posts.note": "Substack próximamente.",
+        "posts.item1": "La era de la infraestructura ya está aquí",
+        "posts.item2": "Sigue en Substack",
+        "posts.note": "Nuevos ensayos en Substack.",
 
         "terms.title": "Términos clave, en lenguaje claro",
         "terms.note": "No es necesario hablar ‘blockchain’ para aprovecharla.",
@@ -403,6 +409,11 @@
         const key = el.getAttribute("data-i18n");
         el.textContent = copy[lang][key] || "";
       });
+      // keep manifesto title language-aware
+      document.querySelectorAll('[data-i18n="posts.item1"]').forEach(a=>{
+        a.textContent = (lang === 'es') ? SUBSTACK_MANIFESTO_TITLE_ES : SUBSTACK_MANIFESTO_TITLE_EN;
+      });
+
       localStorage.setItem("site_lang", lang);
       document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
       const btn = document.getElementById('lang-'+lang);
@@ -421,6 +432,25 @@
     document.getElementById('lang-en').onclick = ()=>setLang('en');
     document.getElementById('lang-es').onclick = ()=>setLang('es');
     setLang(localStorage.getItem('site_lang') || 'en');
+
+    // Wire up Recent Writing links from constants (no HTML edits needed)
+    (function wireSubstackLinks(){
+      // item1 → manifesto link
+      const postLinks = document.querySelectorAll('[data-i18n="posts.item1"]');
+      postLinks.forEach(a => {
+        a.setAttribute('href', SUBSTACK_MANIFESTO_URL);
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      });
+
+      // item2 → Substack home
+      const followLinks = document.querySelectorAll('[data-i18n="posts.item2"]');
+      followLinks.forEach(a => {
+        a.setAttribute('href', SUBSTACK_HOME);
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      });
+    })();
 
     // Fitness expand/collapse
     const fitnessToggle = document.getElementById('fitness-toggle');
