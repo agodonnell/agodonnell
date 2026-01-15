@@ -65,7 +65,6 @@
         <a href="#home" data-i18n="nav.top"></a>
         <a href="#projects" data-i18n="nav.projects"></a>
         <a href="#about" data-i18n="nav.about"></a>
-        <a href="#terms" data-i18n="nav.terms"></a>
         <a href="#fitness" data-i18n="nav.fitness"></a>
         <a href="#contact" data-i18n="nav.contact"></a>
         <div class="lang">
@@ -129,6 +128,8 @@
             <span data-i18n="research.p3.body"></span>
           </li>
         </ul>
+        <div class="hr"></div>
+        <p class="small" data-i18n="research.note"></p>
       </div>
     </section>
 
@@ -145,41 +146,21 @@
         <ul>
           <li><a href="#" data-i18n="posts.item1"></a></li>
           <li><a href="#" data-i18n="posts.item2"></a></li>
+          <li><a href="#" data-i18n="posts.item3"></a></li>
         </ul>
         <div class="hr"></div>
         <p class="small" data-i18n="posts.note"></p>
       </div>
     </section>
 
-    <!-- TERMS + FITNESS SIDE BY SIDE -->
-    <section id="glossary-and-fitness" class="grid">
-      <!-- TERMS -->
-      <div class="col-6 card" id="terms">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-          <h2 style="margin:0" data-i18n="terms.title"></h2>
-          <button id="terms-toggle" class="toggle" aria-expanded="false" aria-controls="terms-list" data-i18n="terms.toggle.show"></button>
-        </div>
-
-        <div id="terms-list" class="hidden" role="region" aria-live="polite">
-          <dl class="terms">
-            <dt data-i18n="terms.sc.title"></dt><dd data-i18n="terms.sc.desc"></dd>
-            <dt data-i18n="terms.oracle.title"></dt><dd data-i18n="terms.oracle.desc"></dd>
-            <dt data-i18n="terms.rail.title"></dt><dd data-i18n="terms.rail.desc"></dd>
-            <dt data-i18n="terms.l1l2.title"></dt><dd data-i18n="terms.l1l2.desc"></dd>
-            <dt data-i18n="terms.shill.title"></dt><dd data-i18n="terms.shill.desc"></dd>
-            <dt data-i18n="terms.token.title"></dt><dd data-i18n="terms.token.desc"></dd>
-          </dl>
-          <div class="hr"></div>
-        </div>
-        <p class="small" data-i18n="terms.note"></p>
-      </div>
-
-      <!-- FITNESS -->
-      <div class="col-6 card" id="fitness">
+    <!-- FITNESS (full width) -->
+    <section id="fitness" class="grid">
+      <div class="col-12 card">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
           <h2 style="margin:0" data-i18n="fitness.title"></h2>
           <button id="fitness-toggle" class="toggle" aria-expanded="false" aria-controls="fitness-list" data-i18n="fitness.toggle.show"></button>
         </div>
+
         <div id="fitness-list" class="article-list hidden" role="region" aria-live="polite">
           <div class="article-item">
             <a href="https://www.breckroadmarathon.com" target="_blank" rel="noopener noreferrer">Breckenridge Road Marathon</a>
@@ -227,6 +208,8 @@
             <div class="tags">Time: 03:30:29 · Pace: 8:01/mi · Place: 561 / 5,519 · Percentile: 10.2%</div>
           </div>
         </div>
+
+        <div class="hr"></div>
         <p class="small" data-i18n="fitness.tagline"></p>
       </div>
     </section>
@@ -263,18 +246,24 @@
   <script>
     // ---- Substack config (change here, not in HTML) ----
     const SUBSTACK_HOME = "https://agodonnell.substack.com/";
+
+    // Post 1
     const SUBSTACK_MANIFESTO_URL = "https://substack.com/home/post/p-175650275";
     const SUBSTACK_MANIFESTO_TITLE_EN = "The Infrastructure Era Is Already Here";
     const SUBSTACK_MANIFESTO_TITLE_ES = "La era de la infraestructura ya está aquí";
 
+    // Post 2
+    const SUBSTACK_ROUTER_URL = "https://agodonnell.substack.com/p/the-case-for-a-digital-settlement";
+    const SUBSTACK_ROUTER_TITLE_EN = "The Case For A Digital Settlement Router";
+    const SUBSTACK_ROUTER_TITLE_ES = "El caso de un enrutador de liquidación digital";
+
     const copy = {
       en: {
-        "header.tagline": "Data-driven systems in practice — feedback loops, performance, durable value.",
+        "header.tagline": "Data-driven systems in practice",
         "nav.top": "Top",
         "nav.projects": "Work",
         "nav.about": "About",
         "nav.contact": "Contact",
-        "nav.terms": "Terms",
         "nav.fitness": "Fitness",
 
         "hero.badge": "Systems • Feedback Loops • Durable Value",
@@ -285,11 +274,11 @@
         "hero.cta2": "Background",
 
         "focus.title": "What I tend to work on",
-        "focus.item1": "Performance systems: endurance training, recovery signals, simple experiments that compound",
-        "focus.item2": "Data platforms & pipelines (Snowflake/Databricks/SQL/Python) — clarity, reliability, and speed",
+        "focus.item1": "Data platforms & pipelines (Snowflake/Databricks/SQL/Python) — clarity, reliability, and speed",
+        "focus.item2": "Performance systems: endurance training, recovery signals, simple experiments that compound",
         "focus.item3": "Instrumentation & automation: turning logs/sensors/events into decision-grade data",
         "focus.item4": "Tokenization, when it matters: escrow/settlement rails tied to real-world workflows",
-        "focus.note": "I try to stay grounded: measurable outcomes, clean feedback loops, and practical systems.",
+        "focus.note": "Grounded in: measurable outcomes, clean feedback loops, and practical systems.",
 
         "work.title": "How I Work",
         "work.s1.title": "Assess",
@@ -303,12 +292,13 @@
         "work.note": "The goal isn’t complexity — it’s durable improvement you can see and repeat.",
 
         "research.title": "Example threads / experiments",
-        "research.p1.title": "Fitness performance loop",
-        "research.p1.body": "Training + recovery signals (HRV/sleep/effort) → adjustments → better performance over time.",
-        "research.p2.title": "Modern data foundations",
-        "research.p2.body": "Pipelines, models, and reporting that leaders actually use — fewer surprises, faster decisions.",
+        "research.p1.title": "Modern data foundations",
+        "research.p1.body": "Pipelines, models, and reporting that leaders actually use — fewer surprises, faster decisions.",
+        "research.p2.title": "Fitness performance loop",
+        "research.p2.body": "Training + recovery signals (HRV/sleep/effort) → adjustments → better performance over time.",
         "research.p3.title": "Tokenized settlement (selectively)",
         "research.p3.body": "Where useful, test escrow/settlement ideas that reduce friction in real-world workflows.",
+        "research.note": "I try to keep explanations simple and outcomes measurable — no jargon required.",
 
         "about.title": "About",
         "about.p1": "Previously: supported cross-border financial relationships across Latin America at JPMorgan and Merrill Lynch, with exposure to trade financing, capital flows, and institutional operations.",
@@ -317,25 +307,9 @@
 
         "posts.title": "Recent Writing",
         "posts.item1": "The Infrastructure Era Is Already Here",
-        "posts.item2": "Follow on Substack",
+        "posts.item2": "The Case For A Digital Settlement Router",
+        "posts.item3": "Follow on Substack",
         "posts.note": "New essays posted on Substack.",
-
-        "terms.title": "Key terms, in plain English",
-        "terms.note": "No need to speak blockchain to benefit from it.",
-        "terms.sc.title": "Smart-contract escrow",
-        "terms.sc.desc": "Funds are held and auto-released when agreed conditions are met (e.g., delivery confirmed).",
-        "terms.oracle.title": "Oracle",
-        "terms.oracle.desc": "A trusted feed that connects contracts to real-world info (delivery, prices, compliance).",
-        "terms.rail.title": "Stablecoin rail",
-        "terms.rail.desc": "A fast, programmable system for moving tokenized dollars (e.g., USDC).",
-        "terms.l1l2.title": "Layer 1 / Layer 2",
-        "terms.l1l2.desc": "Base blockchain (L1) vs. performance layers on top (L2).",
-        "terms.shill.title": "Shill",
-        "terms.shill.desc": "Someone who promotes in a biased way without disclosing interest.",
-        "terms.token.title": "Tokenized asset",
-        "terms.token.desc": "A traditional asset (e.g., T-bill, fund, property right) represented on a blockchain.",
-        "terms.toggle.show": "Show glossary",
-        "terms.toggle.hide": "Hide glossary",
 
         "fitness.title": "Endurance Efforts",
         "fitness.tagline": "Proud to always work for the PR.",
@@ -351,7 +325,6 @@
         "nav.projects": "Trabajo",
         "nav.about": "Perfil",
         "nav.contact": "Contacto",
-        "nav.terms": "Glosario",
         "nav.fitness": "Fitness",
 
         "hero.badge": "Sistemas • Retroalimentación • Valor duradero",
@@ -362,8 +335,8 @@
         "hero.cta2": "Trayectoria",
 
         "focus.title": "En qué suelo trabajar",
-        "focus.item1": "Sistemas de rendimiento: entrenamiento, recuperación y experimentos simples que se acumulan",
-        "focus.item2": "Plataformas y pipelines (Snowflake/Databricks/SQL/Python): claridad, confiabilidad y velocidad",
+        "focus.item1": "Plataformas y pipelines (Snowflake/Databricks/SQL/Python): claridad, confiabilidad y velocidad",
+        "focus.item2": "Sistemas de rendimiento: entrenamiento, recuperación y experimentos simples que se acumulan",
         "focus.item3": "Instrumentación y automatización: de logs/sensores/eventos a datos listos para decidir",
         "focus.item4": "Tokenización cuando aporta valor: escrow/liquidación conectados a flujos reales",
         "focus.note": "Me importa lo medible: resultados, retroalimentación limpia y sistemas prácticos.",
@@ -380,12 +353,13 @@
         "work.note": "La meta no es complejidad — es mejora duradera y repetible.",
 
         "research.title": "Hilos / experimentos ejemplo",
-        "research.p1.title": "Ciclo de rendimiento físico",
-        "research.p1.body": "Entrenamiento + señales (HRV/sueño/esfuerzo) → ajustes → mejor rendimiento con el tiempo.",
-        "research.p2.title": "Bases modernas de datos",
-        "research.p2.body": "Pipelines, modelos y reportes que realmente se usan — menos sorpresas, decisiones más rápidas.",
+        "research.p1.title": "Bases modernas de datos",
+        "research.p1.body": "Pipelines, modelos y reportes que realmente se usan — menos sorpresas, decisiones más rápidas.",
+        "research.p2.title": "Ciclo de rendimiento físico",
+        "research.p2.body": "Entrenamiento + señales (HRV/sueño/esfuerzo) → ajustes → mejor rendimiento con el tiempo.",
         "research.p3.title": "Liquidación tokenizada (selectiva)",
         "research.p3.body": "Cuando conviene, probar ideas de escrow/liquidación que reducen fricción en flujos reales.",
+        "research.note": "Intento explicar en simple y medir resultados — sin jerga obligatoria.",
 
         "about.title": "Perfil",
         "about.p1": "Antes: apoyé relaciones financieras transfronterizas en América Latina (JPMorgan/Merrill), con exposición a financiamiento de comercio y flujos de capital.",
@@ -394,25 +368,9 @@
 
         "posts.title": "Escritura reciente",
         "posts.item1": "La era de la infraestructura ya está aquí",
-        "posts.item2": "Sigue en Substack",
+        "posts.item2": "El caso de un enrutador de liquidación digital",
+        "posts.item3": "Sigue en Substack",
         "posts.note": "Nuevos ensayos en Substack.",
-
-        "terms.title": "Términos clave, en lenguaje claro",
-        "terms.note": "No es necesario hablar ‘blockchain’ para aprovecharla.",
-        "terms.sc.title": "Escrow con contratos inteligentes",
-        "terms.sc.desc": "Fondos retenidos y liberados automáticamente cuando se cumplen condiciones.",
-        "terms.oracle.title": "Oráculo",
-        "terms.oracle.desc": "Fuente confiable que conecta contratos con información del mundo real.",
-        "terms.rail.title": "Riel de stablecoins",
-        "terms.rail.desc": "Sistema rápido y programable para mover dólares tokenizados (p. ej., USDC).",
-        "terms.l1l2.title": "Capa 1 / Capa 2",
-        "terms.l1l2.desc": "Cadena base (C1) vs capas de rendimiento (C2).",
-        "terms.shill.title": "Shill",
-        "terms.shill.desc": "Promoción sesgada sin revelar interés.",
-        "terms.token.title": "Activo tokenizado",
-        "terms.token.desc": "Activo tradicional representado en blockchain.",
-        "terms.toggle.show": "Ver glosario",
-        "terms.toggle.hide": "Ocultar glosario",
 
         "fitness.title": "Esfuerzos de resistencia",
         "fitness.tagline": "Orgulloso de trabajar siempre por mi mejor marca.",
@@ -433,9 +391,12 @@
         el.textContent = copy[lang][key] || "";
       });
 
-      document.querySelectorAll('[data-i18n="posts.item1"]').forEach(a=>{
-        a.textContent = (lang === 'es') ? SUBSTACK_MANIFESTO_TITLE_ES : SUBSTACK_MANIFESTO_TITLE_EN;
-      });
+      // Ensure post titles switch cleanly with language
+      const p1 = document.querySelector('[data-i18n="posts.item1"]');
+      if (p1) p1.textContent = (lang === 'es') ? SUBSTACK_MANIFESTO_TITLE_ES : SUBSTACK_MANIFESTO_TITLE_EN;
+
+      const p2 = document.querySelector('[data-i18n="posts.item2"]');
+      if (p2) p2.textContent = (lang === 'es') ? SUBSTACK_ROUTER_TITLE_ES : SUBSTACK_ROUTER_TITLE_EN;
 
       localStorage.setItem("site_lang", lang);
       document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
@@ -446,10 +407,6 @@
       const ft = document.getElementById('fitness-toggle');
       const fl = document.getElementById('fitness-list');
       if (ft && fl) ft.textContent = copy[lang][ fl.classList.contains('hidden') ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
-
-      const tt = document.getElementById('terms-toggle');
-      const tl = document.getElementById('terms-list');
-      if (tt && tl) tt.textContent = copy[lang][ tl.classList.contains('hidden') ? 'terms.toggle.show' : 'terms.toggle.hide' ];
     }
 
     document.getElementById('lang-en').onclick = ()=>setLang('en');
@@ -458,19 +415,26 @@
 
     // Wire up Recent Writing links from constants (no HTML edits needed)
     (function wireSubstackLinks(){
-      const postLinks = document.querySelectorAll('[data-i18n="posts.item1"]');
-      postLinks.forEach(a => {
-        a.setAttribute('href', SUBSTACK_MANIFESTO_URL);
-        a.setAttribute('target', '_blank');
-        a.setAttribute('rel', 'noopener noreferrer');
-      });
+      const post1 = document.querySelector('[data-i18n="posts.item1"]');
+      if (post1){
+        post1.setAttribute('href', SUBSTACK_MANIFESTO_URL);
+        post1.setAttribute('target', '_blank');
+        post1.setAttribute('rel', 'noopener noreferrer');
+      }
 
-      const followLinks = document.querySelectorAll('[data-i18n="posts.item2"]');
-      followLinks.forEach(a => {
-        a.setAttribute('href', SUBSTACK_HOME);
-        a.setAttribute('target', '_blank');
-        a.setAttribute('rel', 'noopener noreferrer');
-      });
+      const post2 = document.querySelector('[data-i18n="posts.item2"]');
+      if (post2){
+        post2.setAttribute('href', SUBSTACK_ROUTER_URL);
+        post2.setAttribute('target', '_blank');
+        post2.setAttribute('rel', 'noopener noreferrer');
+      }
+
+      const follow = document.querySelector('[data-i18n="posts.item3"]');
+      if (follow){
+        follow.setAttribute('href', SUBSTACK_HOME);
+        follow.setAttribute('target', '_blank');
+        follow.setAttribute('rel', 'noopener noreferrer');
+      }
     })();
 
     // Fitness expand/collapse
@@ -481,16 +445,6 @@
         const nowHidden = fitnessList.classList.toggle('hidden');
         fitnessToggle.setAttribute('aria-expanded', String(!nowHidden));
         fitnessToggle.textContent = copy[currentLang][ nowHidden ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
-      });
-    }
-    // Terms expand/collapse
-    const termsToggle = document.getElementById('terms-toggle');
-    const termsList = document.getElementById('terms-list');
-    if (termsToggle && termsList){
-      termsToggle.addEventListener('click', ()=>{
-        const nowHidden = termsList.classList.toggle('hidden');
-        termsToggle.setAttribute('aria-expanded', String(!nowHidden));
-        termsToggle.textContent = copy[currentLang][ nowHidden ? 'terms.toggle.show' : 'terms.toggle.hide' ];
       });
     }
 
