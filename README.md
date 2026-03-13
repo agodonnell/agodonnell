@@ -1,7 +1,12 @@
-## ❗ Licensing & Usage
+# 🍀 agodonnell 🍀
 
-This repository is copyright © 2025 AG ODonnell.
+I build systems that turn signals into decisions.
 
-All content (including code, images, documentation, and media files) is protected and may not be used, copied, modified, or distributed without express written permission.
+Currently working on:
 
-This repository is intended for personal reference and portfolio use only.
+- [`go-no-go`](https://github.com/agodonnell/go-no-go) — training readiness indicator built around HRV and recovery signals
+- `signal-engine` — macro financial signal generation *(private, in development)*
+
+---
+
+More at [agodonnell.com](https://agodonnell.com)
