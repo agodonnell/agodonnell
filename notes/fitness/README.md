@@ -9,3 +9,11 @@ Working notes related to endurance training, performance tracking, and heart rat
 | File | Description |
 |------|-------------|
 | `endurance_hr_analysis.md` | Heart rate analysis and endurance training review |
+
+---
+
+## Shareable Links
+
+| File | URL |
+|------|-----|
+| `endurance_hr_analysis.md` | https://github.com/agodonnell/agodonnell/blob/main/notes/fitness/endurance_hr_analysis.md |
