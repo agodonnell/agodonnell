@@ -12,12 +12,25 @@ The series returns to its initial value of 1.
 
 ---
 
+## Where the Formula Inputs Come From
+
+The two inputs — `2` and `0.5` — are the **rates** from the observation series:
+
+| obs_num | transition | rate | meaning |
+|---------|------------|------|---------|
+| 1 → 2 | 1 to 2 | **2.0** | value doubled |
+| 2 → 3 | 2 to 1 | **0.5** | value halved |
+
+Both methods operate on these two rates.
+
+---
+
 ## Mean Comparison
 
-| Method | Formula | Result |
-|--------|---------|--------|
-| Arithmetic mean | (2 + 0.5) / 2 | **1.25** |
-| Geometric mean | sqrt(2 × 0.5) | **1.00** |
+| Method | Formula | Expanded | Result |
+|--------|---------|----------|--------|
+| Arithmetic mean | (r₁ + r₂) / 2 | (2 + 0.5) / 2 | **1.25** |
+| Geometric mean | sqrt(r₁ × r₂) | sqrt(2 × 0.5) | **1.00** |
 
 ---
 
