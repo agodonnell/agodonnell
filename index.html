@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaron O'Donnell — Data-Driven Systems</title>
-  <meta name="description" content="Exploring how data-driven systems work in practice—feedback loops, performance under pressure, and where modern tools (data platforms, automation, tokenization) create durable value." />
+  <title>Aaron O'Donnell — Market Intelligence & Digital Systems Architect</title>
+  <meta name="description" content="Aaron O'Donnell designs structured intelligence systems for mid-market businesses exposed to economic and pricing volatility — integrating internal operations with external market signals so leadership can make less reactive decisions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -20,145 +20,162 @@
     .wrap{max-width:1024px;margin:0 auto;padding:28px 20px 64px}
     header{
       display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:24px;
-      position:sticky; top:0; z-index:1000; background:var(--bg); border-bottom:1px solid #1c222a; padding-top:16px;
+      position:sticky;top:0;z-index:1000;background:var(--bg);border-bottom:1px solid #1c222a;padding-top:16px;padding-bottom:14px;
     }
     .brand{font-weight:700;letter-spacing:.2px}
     .framing-line{color:var(--muted);font-size:13px;margin-top:2px}
     .nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
     .nav a{font-weight:500}
-    .lang button{background:transparent;border:1px solid #223; color:var(--muted);padding:6px 10px;border-radius:8px;cursor:pointer}
-    .lang button.active{border-color:var(--accent);color:var(--text)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin:28px 0 18px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start;margin:28px 0 18px}
     .card{background:var(--card);border:1px solid #1c222a;border-radius:16px;padding:20px}
     .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);background:#0f1318;border:1px solid #1c222a;border-radius:999px;padding:6px 10px;margin-bottom:12px}
-    h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:8px 0 10px}
-    p.lead{font-size:clamp(16px,2.4vw,18px);color:var(--muted);margin:0 0 8px}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#071018;border:0;border-radius:10px;padding:10px 14px;font-weight:600}
+    h1{font-size:clamp(26px,4.5vw,40px);line-height:1.15;margin:8px 0 12px}
+    h2{font-size:20px;margin:8px 0 10px}
+    p{margin:0 0 10px;line-height:1.6}
+    p.lead{font-size:clamp(15px,2.2vw,17px);color:var(--muted);margin:0 0 10px;line-height:1.65}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#071018;border:0;border-radius:10px;padding:10px 16px;font-weight:600;font-size:15px}
     .btn.secondary{background:transparent;border:1px solid #263040;color:var(--text)}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}
     .col-6{grid-column:span 6}
     .col-12{grid-column:span 12}
     @media(max-width:860px){.hero{grid-template-columns:1fr}.col-6{grid-column:span 12}}
-    h2{font-size:22px;margin:8px 0 10px}
-    ul{margin:8px 0 0 18px;color:var(--muted)}
+    ul{margin:8px 0 0 18px;color:var(--muted);line-height:1.7}
+    ul li{margin-bottom:4px}
     .footer{margin-top:48px;color:#7b8794;font-size:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-    .article-list {display:flex;flex-direction:column;gap:12px}
-    .article-item a {font-weight:600;font-size:16px}
-    .article-item p, .tags {font-size:14px;color:var(--muted)}
+    .article-list{display:flex;flex-direction:column;gap:12px}
+    .article-item a{font-weight:600;font-size:16px}
+    .article-item p,.tags{font-size:14px;color:var(--muted)}
     .social a{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;color:var(--text);transition:color .2s ease}
     .social a:hover{color:var(--accent)}
-    .toggle { background:transparent;border:1px solid #263040;color:var(--text); border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer; display:inline-flex;align-items:center;gap:8px }
+    .toggle{background:transparent;border:1px solid #263040;color:var(--text);border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
     .hidden{display:none}
     .hr{height:1px;background:#1c222a;margin:14px 0}
-    .small{color:var(--muted);font-size:14px}
+    .small{color:var(--muted);font-size:14px;line-height:1.6}
+    .step-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .step{background:#0f1318;border:1px solid #1c222a;border-radius:12px;padding:14px 16px}
+    .step-num{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+    .step-title{font-weight:600;font-size:15px;margin-bottom:4px}
+    .step-body{font-size:14px;color:var(--muted);line-height:1.55}
+    @media(max-width:600px){.step-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="wrap">
+
     <header>
       <div>
         <div class="brand">Aaron O'Donnell</div>
-        <div class="framing-line" data-i18n="header.tagline"></div>
+        <div class="framing-line">Market Intelligence &amp; Digital Systems Architect</div>
       </div>
       <nav class="nav">
-        <a href="#home" data-i18n="nav.top"></a>
-        <a href="#projects" data-i18n="nav.projects"></a>
-        <a href="#about" data-i18n="nav.about"></a>
-        <a href="#fitness" data-i18n="nav.fitness"></a>
-        <a href="#contact" data-i18n="nav.contact"></a>
-        <div class="lang">
-          <button id="lang-en" aria-label="English">EN</button>
-          <button id="lang-es" aria-label="Español">ES</button>
-        </div>
+        <a href="#home">Top</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#fitness">Fitness</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="card">
-        <div class="badge" data-i18n="hero.badge"></div>
-        <h1 data-i18n="hero.title"></h1>
-        <p class="lead" data-i18n="hero.sub1"></p>
-        <p class="lead" data-i18n="hero.sub2"></p>
+        <div class="badge">Market Intelligence &nbsp;·&nbsp; Volatility Exposure &nbsp;·&nbsp; Decision Architecture</div>
+        <h1>Market Intelligence &amp; Digital Systems Architect</h1>
+        <p class="lead">Information is no longer scarce — clarity under volatility is.</p>
+        <p class="lead">I design structured intelligence systems for mid-market businesses exposed to economic and pricing volatility. By integrating internal operations with external market signals, I help leadership reduce risk, improve timing, and make forward-looking decisions with greater clarity.</p>
         <div class="cta">
-          <a class="btn" href="#projects" data-i18n="hero.cta1"></a>
-          <a class="btn secondary" href="#about" data-i18n="hero.cta2"></a>
+          <a class="btn" href="#work">How I work</a>
+          <a class="btn secondary" href="#about">Background</a>
         </div>
       </div>
       <div class="card">
-        <h2 data-i18n="focus.title"></h2>
+        <h2>Where Intelligence Architecture Creates Advantage</h2>
         <ul>
-          <li data-i18n="focus.item1"></li>
-          <li data-i18n="focus.item2"></li>
-          <li data-i18n="focus.item3"></li>
-          <li data-i18n="focus.item4"></li>
+          <li>Mapping input cost exposure against live market signals</li>
+          <li>Identifying margin compression risk before it appears in financial results</li>
+          <li>Structuring procurement and pricing decisions using forward scenarios</li>
+          <li>Reducing reaction time during periods of volatility</li>
+          <li>Creating unified exposure views across operations and market conditions</li>
         </ul>
         <div class="hr"></div>
-        <div class="small" data-i18n="focus.note"></div>
+        <div class="small">Structured visibility that supports better decisions — before volatility forces them.</div>
       </div>
     </section>
 
-    <!-- SERVICES / PROJECTS -->
-    <section id="projects" class="grid">
+    <!-- HOW I WORK -->
+    <section id="work" class="grid">
       <div class="col-12 card">
-        <h2 data-i18n="work.title"></h2>
-        <ul>
-          <li><strong data-i18n="work.s1.title"></strong> — <span data-i18n="work.s1.body"></span></li>
-          <li><strong data-i18n="work.s2.title"></strong> — <span data-i18n="work.s2.body"></span></li>
-          <li><strong data-i18n="work.s3.title"></strong> — <span data-i18n="work.s3.body"></span></li>
-          <li><strong data-i18n="work.s4.title"></strong> — <span data-i18n="work.s4.body"></span></li>
-        </ul>
+        <h2>How I Work</h2>
+        <p class="small">Most mid-market businesses track historical performance well. The gap is forward-looking visibility — knowing where margin pressure is building before it shows up in a financial statement.</p>
+        <div class="step-grid">
+          <div class="step">
+            <div class="step-num">Step 1</div>
+            <div class="step-title">Diagnose Exposure</div>
+            <div class="step-body">Map where volatility risk is hiding — input costs, pricing lag, procurement timing, FX or commodity exposure — and define what better visibility would change.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">Step 2</div>
+            <div class="step-title">Integrate Signals</div>
+            <div class="step-body">Connect internal operational data with external market signals — commodity prices, freight rates, FX — into a single, structured view.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">Step 3</div>
+            <div class="step-title">Structure Intelligence</div>
+            <div class="step-body">Build decision-ready outputs: scenario models, compression triggers, and forward-looking views — not just historical reporting.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">Step 4</div>
+            <div class="step-title">Sustain Visibility</div>
+            <div class="step-body">Maintain the system as conditions evolve so leadership can act earlier and with greater confidence during periods of change.</div>
+          </div>
+        </div>
         <div class="hr"></div>
-        <p class="small" data-i18n="work.note"></p>
+        <p class="small">Technology is the implementation layer. The goal is reduced decision risk and better timing — outcomes you can measure.</p>
       </div>
 
+      <!-- WHO THIS IS FOR -->
       <div class="col-12 card">
-        <h2 data-i18n="research.title"></h2>
+        <h2>Who This Is For</h2>
+        <p class="small">Mid-market businesses with operational complexity and exposure to input cost swings — distributors, manufacturers, construction firms, importers, commodity-linked businesses, energy services, and agricultural processors.</p>
         <ul>
-          <li>
-            <strong data-i18n="research.p1.title"></strong> —
-            <span data-i18n="research.p1.body"></span>
-          </li>
-          <li>
-            <strong data-i18n="research.p2.title"></strong> —
-            <span data-i18n="research.p2.body"></span>
-          </li>
-          <li>
-            <strong data-i18n="research.p3.title"></strong> —
-            <span data-i18n="research.p3.body"></span>
-          </li>
+          <li>$10M–$100M revenue with limited internal data architecture</li>
+          <li>Exposed to commodity, freight, or FX volatility</li>
+          <li>Relying on spreadsheet-driven analysis and delayed reporting</li>
+          <li>No dedicated intelligence function — but leadership is feeling the gap</li>
         </ul>
         <div class="hr"></div>
-        <p class="small" data-i18n="research.note"></p>
+        <p class="small">Every engagement is built around depth of impact, not breadth of clients.</p>
       </div>
     </section>
 
+    <!-- ABOUT + WRITING -->
     <section id="about" class="grid">
       <div class="col-6 card">
-        <h2 data-i18n="about.title"></h2>
-        <p data-i18n="about.p1"></p>
-        <p data-i18n="about.p2"></p>
+        <h2>About</h2>
+        <p>Earlier in my career I supported cross-border financial relationships across Latin America at JPMorgan and Merrill Lynch — working closely with trade financing, capital flows, and institutional operations. That background gave me a strong foundation in how volatility and market signals affect real business decisions.</p>
+        <p>Now I design intelligence systems that help mid-market businesses navigate that same volatility with more structure and less reaction.</p>
         <div class="hr"></div>
-        <p class="small" data-i18n="about.p3"></p>
+        <p class="small">Common thread: structured information, cleaner decisions, and outcomes you can track.</p>
       </div>
       <div class="col-6 card">
-        <h2 data-i18n="posts.title"></h2>
+        <h2>Recent Writing</h2>
         <ul>
-          <li><a href="#" data-i18n="posts.item1"></a></li>
-          <li><a href="#" data-i18n="posts.item2"></a></li>
-          <li><a href="#" data-i18n="posts.item3"></a></li>
+          <li><a href="https://substack.com/home/post/p-175650275" target="_blank" rel="noopener noreferrer">The Infrastructure Era Is Already Here</a></li>
+          <li><a href="https://agodonnell.substack.com/p/the-case-for-a-digital-settlement" target="_blank" rel="noopener noreferrer">The Case For A Digital Settlement Router</a></li>
+          <li><a href="https://agodonnell.substack.com/" target="_blank" rel="noopener noreferrer">Follow on Substack</a></li>
         </ul>
         <div class="hr"></div>
-        <p class="small" data-i18n="posts.note"></p>
+        <p class="small">New essays posted on Substack.</p>
       </div>
     </section>
 
-    <!-- FITNESS (full width) -->
+    <!-- FITNESS -->
     <section id="fitness" class="grid">
       <div class="col-12 card">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-          <h2 style="margin:0" data-i18n="fitness.title"></h2>
-          <button id="fitness-toggle" class="toggle" aria-expanded="false" aria-controls="fitness-list" data-i18n="fitness.toggle.show"></button>
+          <h2 style="margin:0">Endurance Efforts</h2>
+          <button id="fitness-toggle" class="toggle" aria-expanded="false" aria-controls="fitness-list">Show races</button>
         </div>
 
         <div id="fitness-list" class="article-list hidden" role="region" aria-live="polite">
@@ -190,7 +207,7 @@
           <div class="article-item">
             <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">Denver Colfax Marathon</a>
             <p>May 15, 2011 · Denver, CO</p>
-            <div class="tags">Time: 03:36:12 · Pace: 8:14/mi · Place: 109 / 757 · Percentile: 14.4%</div>
+            <div class="tags">Time: 03:36:12 · Pace: 8:14/mi · Time: 03:36:12 · Pace: 8:14/mi · Place: 109 / 757 · Percentile: 14.4%</div>
           </div>
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/rock-n-roll-san-antonio-marathon-and-12-marathon-2/2010/results" target="_blank" rel="noopener noreferrer">Rock 'n' Roll San Antonio Marathon</a>
@@ -210,25 +227,26 @@
         </div>
 
         <div class="hr"></div>
-        <p class="small" data-i18n="fitness.tagline"></p>
+        <p class="small">Proud to always work for the PR.</p>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="grid">
       <div class="col-12 card">
-        <h2 data-i18n="contact.title"></h2>
+        <h2>Get in touch</h2>
         <p class="social">
           <a href="https://github.com/agodonnell" target="_blank" aria-label="GitHub">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0.3C5.37 0.3 0 5.67 0 12.3c0 5.28 3.438 9.75 8.207 11.325.6.113.82-.263.82-.582 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.805 1.304 3.492.996.108-.776.42-1.305.763-1.605-2.665-.303-5.466-1.332-5.466-5.932 0-1.31.468-2.383 1.236-3.222-.124-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.99-.399 3.015-.404 1.023.005 2.053.137 3.015.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.805 5.625-5.475 5.922.432.372.816 1.102.816 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.216.699.825.58C20.565 22.047 24 17.577 24 12.3c0-6.63-5.37-12-12-12z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0.3C5.37 0.3 0 5.67 0 12.3c0 5.28 3.438 9.75 8.207 11.325.6.113.82-.263.82-.582 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.805 1.304 3.492.996.108-.776.42-1.305.763-1.605-2.665-.303-5.466-1.332-5.466-5.932 0-1.31.468-2.383 1.236-3.222-.124-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.99-.399 3.015-.404 1.023.005 2.053.137 3.015.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.805 5.625-5.475 5.922.432.372.816 1.102.816 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.216.699.825.58C20.565 22.047 24 17.577 24 12.3c0-6.63-5.37-12-12-12z"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/ag-odonnell-64691ba9/" target="_blank" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4v-10h3v10zm-1.5-11.27c-.96 0-1.75-.79-1.75-1.75S4.54 4.23 5.5 4.23c.97 0 1.75.79 1.75 1.75S6.47 7.73 5.5 7.73zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.97V19h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59V19z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4v-10h3v10zm-1.5-11.27c-.96 0-1.75-.79-1.75-1.75S4.54 4.23 5.5 4.23c.97 0 1.75.79 1.75 1.75S6.47 7.73 5.5 7.73zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.97V19h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59V19z"/></svg>
           </a>
           <a href="https://x.com/agodonnell" target="_blank" aria-label="X (Twitter)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.97 1H18.75L12.42 8.4L6.66 1H0L9.23 12.12L0 23H4.23L10.91 15.17L17.12 23H23.34L13.67 11.4L22.97 1Z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.97 1H18.75L12.42 8.4L6.66 1H0L9.23 12.12L0 23H4.23L10.91 15.17L17.12 23H23.34L13.67 11.4L22.97 1Z"/></svg>
           </a>
           <a href="https://substack.com/@agodonnell" target="_blank" aria-label="Substack">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect x="3" y="4" width="18" height="3" rx="1"></rect><rect x="3" y="9" width="18" height="3" rx="1"></rect><path d="M3 14h18v6l-9-3-9 3v-6z"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="3" rx="1"></rect><rect x="3" y="9" width="18" height="3" rx="1"></rect><path d="M3 14h18v6l-9-3-9 3v-6z"></path></svg>
           </a>
         </p>
       </div>
@@ -237,218 +255,22 @@
     <footer class="footer">
       <span>&copy; <span id="year"></span> Aaron O'Donnell</span>
       <span>·</span>
-      <span data-i18n="footer.rights"></span>
+      <span>All rights reserved.</span>
       <span>·</span>
       <a href="#home" aria-label="Back to top">↑ Top</a>
     </footer>
   </div>
 
   <script>
-    // ---- Substack config (change here, not in HTML) ----
-    const SUBSTACK_HOME = "https://agodonnell.substack.com/";
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Post 1
-    const SUBSTACK_MANIFESTO_URL = "https://substack.com/home/post/p-175650275";
-    const SUBSTACK_MANIFESTO_TITLE_EN = "The Infrastructure Era Is Already Here";
-    const SUBSTACK_MANIFESTO_TITLE_ES = "La era de la infraestructura ya está aquí";
-
-    // Post 2
-    const SUBSTACK_ROUTER_URL = "https://agodonnell.substack.com/p/the-case-for-a-digital-settlement";
-    const SUBSTACK_ROUTER_TITLE_EN = "The Case For A Digital Settlement Router";
-    const SUBSTACK_ROUTER_TITLE_ES = "El caso de un enrutador de liquidación digital";
-
-    const copy = {
-      en: {
-        "header.tagline": "Data-driven systems",
-        "nav.top": "Top",
-        "nav.projects": "Work",
-        "nav.about": "About",
-        "nav.contact": "Contact",
-        "nav.fitness": "Fitness",
-
-        "hero.badge": "Data platforms & pipelines • Performance Systems • Automation • Tokenization",
-        "hero.title": "I explore how data-driven systems actually work in practice.",
-        "hero.sub1": "My focus is on real-world feedback loops: what improves performance, what breaks under pressure, and how signals become decisions.",
-        "hero.sub2": "Tools vary by system — data platforms, automation, tokenization, smart-contracts rails.",
-        "hero.cta1": "How I work",
-        "hero.cta2": "Background",
-
-        "focus.title": "What I tend to work on",
-        "focus.item1": "Data platforms & pipelines (Snowflake/Databricks/SQL/Python) — clarity, reliability, and speed",
-        "focus.item2": "Performance systems: endurance training, recovery signals, simple experiments that compound",
-        "focus.item3": "Instrumentation & automation: turning logs/sensors/events into decision-grade data",
-        "focus.item4": "Tokenization, when it matters: escrow/settlement rails tied to real-world workflows",
-        "focus.note": "Grounded in: measurable outcomes, and practical systems.",
-
-        "work.title": "How I Work",
-        "work.s1.title": "Assess",
-        "work.s1.body": "Define the system, the constraints, and what “better” means (a metric you can trust).",
-        "work.s2.title": "Instrument",
-        "work.s2.body": "Capture the right signals (data, logs, sensors, inputs) without overbuilding.",
-        "work.s3.title": "Iterate",
-        "work.s3.body": "Run small tests, measure outcomes, and keep what survives contact with reality.",
-        "work.s4.title": "Scale",
-        "work.s4.body": "Harden the pipeline, automate the loop, and only then consider advanced rails (including tokenization).",
-        "work.note": "The goal is parsimony not complexity — tangible improvement you can track.",
-
-        "research.title": "Example threads / experiments",
-        "research.p1.title": "Modern data foundations",
-        "research.p1.body": "Pipelines, models, and reporting that leaders actually use — fewer surprises, faster decisions.",
-        "research.p2.title": "Fitness performance loop",
-        "research.p2.body": "Training + recovery signals (HRV/sleep/effort) → adjustments → better performance over time.",
-        "research.p3.title": "Tokenized settlement (selectively)",
-        "research.p3.body": "Where useful, test escrow/settlement ideas that reduce friction in real-world workflows.",
-        "research.note": "I try to keep explanations simple and outcomes measurable — no jargon required.",
-
-        "about.title": "About",
-        "about.p1": "Previously: supported cross-border financial relationships across Latin America at JPMorgan and Merrill Lynch, with exposure to trade financing, capital flows, and institutional operations.",
-        "about.p2": "Now: I build and test systems — sometimes in business, sometimes in fitness — and write about what holds up under pressure.",
-        "about.p3": "Common thread: measurable outcomes, clean feedback loops, and modern tools used with restraint.",
-
-        "posts.title": "Recent Writing",
-        "posts.item1": "The Infrastructure Era Is Already Here",
-        "posts.item2": "The Case For A Digital Settlement Router",
-        "posts.item3": "Follow on Substack",
-        "posts.note": "New essays posted on Substack.",
-
-        "fitness.title": "Endurance Efforts",
-        "fitness.tagline": "Proud to always work for the PR.",
-        "fitness.toggle.show": "Show races",
-        "fitness.toggle.hide": "Hide races",
-
-        "contact.title": "Get in touch",
-        "footer.rights": "All rights reserved."
-      },
-      es: {
-        "header.tagline": "Sistemas basados en datos — ciclos de retroalimentación, rendimiento y valor duradero.",
-        "nav.top": "Inicio",
-        "nav.projects": "Trabajo",
-        "nav.about": "Perfil",
-        "nav.contact": "Contacto",
-        "nav.fitness": "Fitness",
-
-        "hero.badge": "Sistemas • Retroalimentación • Valor duradero",
-        "hero.title": "Exploro cómo funcionan los sistemas basados en datos en la práctica.",
-        "hero.sub1": "Me enfoco en ciclos reales: qué mejora el rendimiento, qué falla bajo presión y cómo las señales se convierten en decisiones.",
-        "hero.sub2": "Las herramientas dependen del problema — plataformas de datos, automatización y (cuando encaja) tokenización y rieles con contratos inteligentes.",
-        "hero.cta1": "Cómo trabajo",
-        "hero.cta2": "Trayectoria",
-
-        "focus.title": "En qué suelo trabajar",
-        "focus.item1": "Plataformas y pipelines (Snowflake/Databricks/SQL/Python): claridad, confiabilidad y velocidad",
-        "focus.item2": "Sistemas de rendimiento: entrenamiento, recuperación y experimentos simples que se acumulan",
-        "focus.item3": "Instrumentación y automatización: de logs/sensores/eventos a datos listos para decidir",
-        "focus.item4": "Tokenización cuando aporta valor: escrow/liquidación conectados a flujos reales",
-        "focus.note": "Me importa lo medible: resultados, retroalimentación limpia y sistemas prácticos.",
-
-        "work.title": "Cómo trabajo",
-        "work.s1.title": "Evaluar",
-        "work.s1.body": "Definir el sistema, las restricciones y qué significa “mejor” (una métrica confiable).",
-        "work.s2.title": "Instrumentar",
-        "work.s2.body": "Capturar las señales correctas (datos, logs, sensores, inputs) sin sobrediseñar.",
-        "work.s3.title": "Iterar",
-        "work.s3.body": "Probar en pequeño, medir resultados y quedarme con lo que funciona en la realidad.",
-        "work.s4.title": "Escalar",
-        "work.s4.body": "Fortalecer el pipeline, automatizar el ciclo y recién ahí considerar rieles avanzados (incluida tokenización).",
-        "work.note": "La meta no es complejidad — es mejora duradera y repetible.",
-
-        "research.title": "Hilos / experimentos ejemplo",
-        "research.p1.title": "Bases modernas de datos",
-        "research.p1.body": "Pipelines, modelos y reportes que realmente se usan — menos sorpresas, decisiones más rápidas.",
-        "research.p2.title": "Ciclo de rendimiento físico",
-        "research.p2.body": "Entrenamiento + señales (HRV/sueño/esfuerzo) → ajustes → mejor rendimiento con el tiempo.",
-        "research.p3.title": "Liquidación tokenizada (selectiva)",
-        "research.p3.body": "Cuando conviene, probar ideas de escrow/liquidación que reducen fricción en flujos reales.",
-        "research.note": "Intento explicar en simple y medir resultados — sin jerga obligatoria.",
-
-        "about.title": "Perfil",
-        "about.p1": "Antes: apoyé relaciones financieras transfronterizas en América Latina (JPMorgan/Merrill), con exposición a financiamiento de comercio y flujos de capital.",
-        "about.p2": "Ahora: construyo y pruebo sistemas — a veces en negocios, a veces en fitness — y escribo sobre lo que aguanta bajo presión.",
-        "about.p3": "Hilo común: resultados medibles, retroalimentación clara y herramientas modernas usadas con criterio.",
-
-        "posts.title": "Escritura reciente",
-        "posts.item1": "La era de la infraestructura ya está aquí",
-        "posts.item2": "El caso de un enrutador de liquidación digital",
-        "posts.item3": "Sigue en Substack",
-        "posts.note": "Nuevos ensayos en Substack.",
-
-        "fitness.title": "Esfuerzos de resistencia",
-        "fitness.tagline": "Orgulloso de trabajar siempre por mi mejor marca.",
-        "fitness.toggle.show": "Ver carreras",
-        "fitness.toggle.hide": "Ocultar carreras",
-
-        "contact.title": "Contacto",
-        "footer.rights": "Todos los derechos reservados."
-      }
-    };
-
-    let currentLang = 'en';
-
-    function setLang(lang){
-      currentLang = lang;
-      document.querySelectorAll("[data-i18n]").forEach(el=>{
-        const key = el.getAttribute("data-i18n");
-        el.textContent = copy[lang][key] || "";
-      });
-
-      // Ensure post titles switch cleanly with language
-      const p1 = document.querySelector('[data-i18n="posts.item1"]');
-      if (p1) p1.textContent = (lang === 'es') ? SUBSTACK_MANIFESTO_TITLE_ES : SUBSTACK_MANIFESTO_TITLE_EN;
-
-      const p2 = document.querySelector('[data-i18n="posts.item2"]');
-      if (p2) p2.textContent = (lang === 'es') ? SUBSTACK_ROUTER_TITLE_ES : SUBSTACK_ROUTER_TITLE_EN;
-
-      localStorage.setItem("site_lang", lang);
-      document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
-      const btn = document.getElementById('lang-'+lang);
-      if (btn) btn.classList.add('active');
-      document.documentElement.lang = lang;
-
-      const ft = document.getElementById('fitness-toggle');
-      const fl = document.getElementById('fitness-list');
-      if (ft && fl) ft.textContent = copy[lang][ fl.classList.contains('hidden') ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
-    }
-
-    document.getElementById('lang-en').onclick = ()=>setLang('en');
-    document.getElementById('lang-es').onclick = ()=>setLang('es');
-    setLang(localStorage.getItem('site_lang') || 'en');
-
-    // Wire up Recent Writing links from constants (no HTML edits needed)
-    (function wireSubstackLinks(){
-      const post1 = document.querySelector('[data-i18n="posts.item1"]');
-      if (post1){
-        post1.setAttribute('href', SUBSTACK_MANIFESTO_URL);
-        post1.setAttribute('target', '_blank');
-        post1.setAttribute('rel', 'noopener noreferrer');
-      }
-
-      const post2 = document.querySelector('[data-i18n="posts.item2"]');
-      if (post2){
-        post2.setAttribute('href', SUBSTACK_ROUTER_URL);
-        post2.setAttribute('target', '_blank');
-        post2.setAttribute('rel', 'noopener noreferrer');
-      }
-
-      const follow = document.querySelector('[data-i18n="posts.item3"]');
-      if (follow){
-        follow.setAttribute('href', SUBSTACK_HOME);
-        follow.setAttribute('target', '_blank');
-        follow.setAttribute('rel', 'noopener noreferrer');
-      }
-    })();
-
-    // Fitness expand/collapse
     const fitnessToggle = document.getElementById('fitness-toggle');
     const fitnessList = document.getElementById('fitness-list');
-    if (fitnessToggle && fitnessList){
-      fitnessToggle.addEventListener('click', ()=>{
-        const nowHidden = fitnessList.classList.toggle('hidden');
-        fitnessToggle.setAttribute('aria-expanded', String(!nowHidden));
-        fitnessToggle.textContent = copy[currentLang][ nowHidden ? 'fitness.toggle.show' : 'fitness.toggle.hide' ];
-      });
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
+    fitnessToggle.addEventListener('click', () => {
+      const nowHidden = fitnessList.classList.toggle('hidden');
+      fitnessToggle.setAttribute('aria-expanded', String(!nowHidden));
+      fitnessToggle.textContent = nowHidden ? 'Show races' : 'Hide races';
+    });
   </script>
 </body>
 </html>
