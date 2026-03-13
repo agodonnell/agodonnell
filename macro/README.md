@@ -41,3 +41,4 @@ Curated resources, research references, and working notes for macro-oriented ana
 | Resource | Description |
 |----------|-------------|
 | [OpenBB Terminal](https://openbb.co) | Open-source Bloomberg-style financial terminal |
+| [Pro OpenBB Terminal](https://pro.openbb.co) | Open-source Bloomberg-style financial terminal |
