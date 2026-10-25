@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaron O'Donnell — Market Intelligence & Digital Systems Architect</title>
-  <meta name="description" content="Aaron O'Donnell designs structured intelligence systems for mid-market businesses exposed to economic and pricing volatility — integrating internal operations with external market signals so leadership can make less reactive decisions." />
+  <title>agodonnell | Secure Generative AI on Governed Data</title>
+  <meta name="description" content="agodonnell builds generative AI on an organization's own documents and data, inside a secure, governed platform, for legal, healthcare, financial services, and other regulated firms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://agodonnell.com/" />
+  <meta property="og:title" content="agodonnell | Secure Generative AI on Governed Data" />
+  <meta property="og:description" content="Generative AI that stays inside your walls. Built on Databricks for regulated firms." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☘️</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,7 +33,8 @@
     .nav a{font-weight:500}
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start;margin:28px 0 18px}
     .card{background:var(--card);border:1px solid #1c222a;border-radius:16px;padding:20px}
-    .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);background:#0f1318;border:1px solid #1c222a;border-radius:999px;padding:6px 10px;margin-bottom:12px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .badge{display:inline-flex;align-items:center;font-size:12px;color:var(--muted);background:#0f1318;border:1px solid #1c222a;border-radius:999px;padding:6px 10px}
     h1{font-size:clamp(26px,4.5vw,40px);line-height:1.15;margin:8px 0 12px}
     h2{font-size:20px;margin:8px 0 10px}
     p{margin:0 0 10px;line-height:1.6}
@@ -42,11 +48,11 @@
     @media(max-width:860px){.hero{grid-template-columns:1fr}.col-6{grid-column:span 12}}
     ul{margin:8px 0 0 18px;color:var(--muted);line-height:1.7}
     ul li{margin-bottom:4px}
-    .footer{margin-top:48px;color:#7b8794;font-size:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .footer{margin-top:48px;color:#7b8794;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
     .article-list{display:flex;flex-direction:column;gap:12px}
     .article-item a{font-weight:600;font-size:16px}
     .article-item p,.tags{font-size:14px;color:var(--muted)}
-    .social a{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;color:var(--text);transition:color .2s ease}
+    .social a{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;color:#7b8794;transition:color .2s ease}
     .social a:hover{color:var(--accent)}
     .toggle{background:transparent;border:1px solid #263040;color:var(--text);border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
     .hidden{display:none}
@@ -65,112 +71,131 @@
 
     <header>
       <div>
-        <div class="brand">Aaron O'Donnell</div>
-        <div class="framing-line">Market Intelligence &amp; Digital Systems Architect</div>
+        <div class="brand">agodonnell</div>
+        <div class="framing-line">Secure generative AI on governed data</div>
       </div>
       <nav class="nav">
         <a href="#home">Top</a>
-        <a href="#work">Work</a>
+        <a href="#work">Approach</a>
+        <a href="#signals">Signals</a>
         <a href="#about">About</a>
-        <a href="#fitness">Fitness</a>
-        <a href="#contact">Contact</a>
+        <a href="#fitness">Endurance</a>
       </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="card">
-        <div class="badge">Market Intelligence &nbsp;·&nbsp; Volatility Exposure &nbsp;·&nbsp; Decision Architecture</div>
-        <h1>Market Intelligence &amp; Digital Systems Architect</h1>
-        <p class="lead">Information is no longer scarce — clarity under volatility is.</p>
-        <p class="lead">I design structured intelligence systems for mid-market businesses exposed to economic and pricing volatility. By integrating internal operations with external market signals, I help leadership reduce risk, improve timing, and make forward-looking decisions with greater clarity.</p>
+        <div class="badges">
+          <span class="badge">Generative AI</span>
+          <span class="badge">Databricks</span>
+          <span class="badge">Regulated Data</span>
+        </div>
+        <h1>Generative AI that stays inside your walls</h1>
+        <p class="lead">agodonnell builds generative AI on your own documents and data, inside a secure, governed platform. The documents, the search index, the models, and the application your team uses all stay within your control.</p>
+        <p class="lead">Built for legal, healthcare, financial services, and other organizations where confidentiality is not optional.</p>
         <div class="cta">
-          <a class="btn" href="#work">How I work</a>
+          <a class="btn" href="#work">How it works</a>
           <a class="btn secondary" href="#about">Background</a>
         </div>
       </div>
       <div class="card">
-        <h2>Where Intelligence Architecture Creates Advantage</h2>
+        <h2>Where Private GenAI Creates Advantage</h2>
         <ul>
-          <li>Mapping input cost exposure against live market signals</li>
-          <li>Identifying margin compression risk before it appears in financial results</li>
-          <li>Structuring procurement and pricing decisions using forward scenarios</li>
-          <li>Reducing reaction time during periods of volatility</li>
-          <li>Creating unified exposure views across operations and market conditions</li>
+          <li>Ask questions across thousands of documents and get answers with citations</li>
+          <li>Find clauses, precedents, and prior work in seconds instead of hours</li>
+          <li>Keep privileged and regulated data inside a governed boundary</li>
+          <li>Replace scattered AI subscriptions with one controlled platform</li>
+          <li>Give non-technical staff a simple tool they will actually use</li>
         </ul>
         <div class="hr"></div>
-        <div class="small">Structured visibility that supports better decisions — before volatility forces them.</div>
+        <div class="small">The model is the easy part. The value is in governed, trusted data.</div>
       </div>
     </section>
 
-    <!-- HOW I WORK -->
+    <!-- APPROACH -->
     <section id="work" class="grid">
       <div class="col-12 card">
-        <h2>How I Work</h2>
-        <p class="small">Most mid-market businesses track historical performance well. The gap is forward-looking visibility — knowing where margin pressure is building before it shows up in a financial statement.</p>
+        <h2>How It Works</h2>
+        <p class="small">Most firms already see what AI could do. The blocker is trust: where the documents go, who can see them, and whether the answers can be checked.</p>
         <div class="step-grid">
           <div class="step">
             <div class="step-num">Step 1</div>
-            <div class="step-title">Diagnose Exposure</div>
-            <div class="step-body">Map where volatility risk is hiding — input costs, pricing lag, procurement timing, FX or commodity exposure — and define what better visibility would change.</div>
+            <div class="step-title">Assess</div>
+            <div class="step-body">Identify the document collections and questions that matter most, and define the security and access rules they require.</div>
           </div>
           <div class="step">
             <div class="step-num">Step 2</div>
-            <div class="step-title">Integrate Signals</div>
-            <div class="step-body">Connect internal operational data with external market signals — commodity prices, freight rates, FX — into a single, structured view.</div>
+            <div class="step-title">Secure the Data</div>
+            <div class="step-body">Bring documents into a governed lake on Databricks, with access controls and audit trails through Unity Catalog.</div>
           </div>
           <div class="step">
             <div class="step-num">Step 3</div>
-            <div class="step-title">Structure Intelligence</div>
-            <div class="step-body">Build decision-ready outputs: scenario models, compression triggers, and forward-looking views — not just historical reporting.</div>
+            <div class="step-title">Build the Assistant</div>
+            <div class="step-body">Index documents with vector search and connect models served inside the platform, so every answer comes from your own sources, with citations.</div>
           </div>
           <div class="step">
             <div class="step-num">Step 4</div>
-            <div class="step-title">Sustain Visibility</div>
-            <div class="step-body">Maintain the system as conditions evolve so leadership can act earlier and with greater confidence during periods of change.</div>
+            <div class="step-title">Put It to Work</div>
+            <div class="step-body">Deliver a simple application for staff, measure answer quality, and improve it as usage grows.</div>
           </div>
         </div>
         <div class="hr"></div>
-        <p class="small">Technology is the implementation layer. The goal is reduced decision risk and better timing — outcomes you can measure.</p>
+        <p class="small">Technology is the implementation layer. The goal is faster, more confident work on information you already own.</p>
       </div>
 
       <!-- WHO THIS IS FOR -->
       <div class="col-12 card">
         <h2>Who This Is For</h2>
-        <p class="small">Mid-market businesses with operational complexity and exposure to input cost swings — distributors, manufacturers, construction firms, importers, commodity-linked businesses, energy services, and agricultural processors.</p>
+        <p class="small">Mid-market organizations with large document collections and strict confidentiality requirements: law firms, healthcare organizations, insurers, financial services firms, and professional services.</p>
         <ul>
-          <li>$10M–$100M revenue with limited internal data architecture</li>
-          <li>Exposed to commodity, freight, or FX volatility</li>
-          <li>Relying on spreadsheet-driven analysis and delayed reporting</li>
-          <li>No dedicated intelligence function — but leadership is feeling the gap</li>
+          <li>Thousands of documents that are hard to search and easy to lose track of</li>
+          <li>Confidentiality obligations that rule out sending data to public AI tools</li>
+          <li>Staff already experimenting with AI on their own, without controls</li>
+          <li>No in-house team to build and govern an AI platform</li>
         </ul>
         <div class="hr"></div>
         <p class="small">Every engagement is built around depth of impact, not breadth of clients.</p>
       </div>
+
+      <!-- MARKET SIGNALS -->
+      <div class="col-12 card" id="signals">
+        <h2>Beyond Documents: Market Signals</h2>
+        <p class="small">The same governed platform can combine your internal data with external market signals, so leadership sees risks and opportunities before they show up in financial results. The approach is familiar to macro traders; the difference is applying it to the operating decisions of a mid-market business.</p>
+        <ul>
+          <li>Map input cost exposure against commodity prices, freight rates, and FX</li>
+          <li>Spot margin pressure building before it reaches the financial statements</li>
+          <li>Use AI to turn signals into plain-language briefings leadership can act on</li>
+        </ul>
+        <div class="hr"></div>
+        <p class="small">Unified data first. Intelligence on top.</p>
+      </div>
     </section>
 
-    <!-- ABOUT + WRITING -->
+    <!-- ABOUT + CREDENTIALS -->
     <section id="about" class="grid">
       <div class="col-6 card">
         <h2>About</h2>
-        <p>Earlier in my career I supported cross-border financial relationships across Latin America at JPMorgan and Merrill Lynch — working closely with trade financing, capital flows, and institutional operations. That background gave me a strong foundation in how volatility and market signals affect real business decisions.</p>
-        <p>Now I design intelligence systems that help mid-market businesses navigate that same volatility with more structure and less reaction.</p>
+        <p>agodonnell is the independent practice of Aaron O'Donnell.</p>
+        <p>I started in finance, supporting cross-border relationships across Latin America at Merrill Lynch and JPMorgan Chase. Since 2009 I have built analytics and data platforms for large federal programs, where security, auditability, and data quality are requirements, not preferences.</p>
+        <p>Today I focus on bringing generative AI into those same governed environments.</p>
         <div class="hr"></div>
-        <p class="small">Common thread: structured information, cleaner decisions, and outcomes you can track.</p>
+        <p class="small">Common thread: trusted data, clear answers, and outcomes you can measure.</p>
       </div>
       <div class="col-6 card">
-        <h2>Recent Writing</h2>
+        <h2>Credentials</h2>
         <ul>
-          <li><a href="https://substack.com/home/post/p-175650275" target="_blank" rel="noopener noreferrer">The Infrastructure Era Is Already Here</a></li>
-          <li><a href="https://agodonnell.substack.com/p/the-case-for-a-digital-settlement" target="_blank" rel="noopener noreferrer">The Case For A Digital Settlement Router</a></li>
-          <li><a href="https://agodonnell.substack.com/" target="_blank" rel="noopener noreferrer">Follow on Substack</a></li>
+          <li>Databricks Certified Generative AI Engineer Associate</li>
+          <li>Databricks Certified Data Engineer Professional</li>
+          <li>Databricks Certified Data Engineer Associate</li>
+          <li>MS Data Science, Northwestern University</li>
+          <li>BBA Finance, University of Texas at Austin (McCombs)</li>
+          <li>Bilingual English and Spanish</li>
         </ul>
-        <div class="hr"></div>
-        <p class="small">New essays posted on Substack.</p>
       </div>
     </section>
 
-    <!-- FITNESS -->
+    <!-- ENDURANCE -->
     <section id="fitness" class="grid">
       <div class="col-12 card">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
@@ -181,48 +206,48 @@
         <div id="fitness-list" class="article-list hidden" role="region" aria-live="polite">
           <div class="article-item">
             <a href="https://www.breckroadmarathon.com" target="_blank" rel="noopener noreferrer">Breckenridge Road Marathon</a>
-            <p>October 11, 2025 · Breckenridge, CO</p>
-            <div class="tags">Time: 03:44:49 · Pace: 8:34/mi · Place: 1 / 78 · Percentile: 1.0%</div>
+            <p>October 11, 2025 | Breckenridge, CO</p>
+            <div class="tags">Time: 03:44:49 | Pace: 8:34/mi | Place: 1 / 78 | Percentile: 1.3%</div>
           </div>
           <div class="article-item">
             <a href="https://www.alltrails.com/trail/us/colorado/colorado-trail-segment-6" target="_blank" rel="noopener noreferrer">MTB: Colorado Trail Segment #6</a>
-            <p>July 19, 2025 · Kenosha Pass to Breckenridge Colorado</p>
-            <div class="tags">Time: 06:00:33 · Distance: 31.91mi · Pace: 5.3mph · Place: 2 / 2 · Percentile: 100.0%</div>
+            <p>July 19, 2025 | Kenosha Pass to Breckenridge, CO</p>
+            <div class="tags">Time: 06:00:33 | Distance: 31.91mi | Pace: 5.3mph</div>
           </div>
           <div class="article-item">
             <a href="https://comarathon.com" target="_blank" rel="noopener noreferrer">Colorado Marathon</a>
-            <p>May 5, 2024 · Fort Collins, CO</p>
-            <div class="tags">Time: 03:25:58 · Pace: 7:51/mi · Place: 168 / 1,051 · Percentile: 16.0%</div>
+            <p>May 5, 2024 | Fort Collins, CO</p>
+            <div class="tags">Time: 03:25:58 | Pace: 7:51/mi | Place: 168 / 1,051 | Percentile: 16.0%</div>
           </div>
           <div class="article-item">
             <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">Denver Colfax Marathon</a>
-            <p>May 15, 2022 · Denver, CO</p>
-            <div class="tags">Time: 04:00:34 · Pace: 9:11/mi · Place: 285 / 1,095 · Percentile: 26.0%</div>
+            <p>May 15, 2022 | Denver, CO</p>
+            <div class="tags">Time: 04:00:34 | Pace: 9:11/mi | Place: 285 / 1,095 | Percentile: 26.0%</div>
           </div>
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/big-d-texas-marathon-8/2012/results" target="_blank" rel="noopener noreferrer">Big-D Texas Marathon</a>
-            <p>Apr 15, 2012 · Dallas, TX</p>
-            <div class="tags">Time: 03:45:06 · Pace: 8:35/mi · Place: 74 / 689 · Percentile: 10.7%</div>
+            <p>Apr 15, 2012 | Dallas, TX</p>
+            <div class="tags">Time: 03:45:06 | Pace: 8:35/mi | Place: 74 / 689 | Percentile: 10.7%</div>
           </div>
           <div class="article-item">
             <a href="https://www.runcolfax.org/" target="_blank" rel="noopener noreferrer">Denver Colfax Marathon</a>
-            <p>May 15, 2011 · Denver, CO</p>
-            <div class="tags">Time: 03:36:12 · Pace: 8:14/mi · Time: 03:36:12 · Pace: 8:14/mi · Place: 109 / 757 · Percentile: 14.4%</div>
+            <p>May 15, 2011 | Denver, CO</p>
+            <div class="tags">Time: 03:36:12 | Pace: 8:14/mi | Place: 109 / 757 | Percentile: 14.4%</div>
           </div>
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/rock-n-roll-san-antonio-marathon-and-12-marathon-2/2010/results" target="_blank" rel="noopener noreferrer">Rock 'n' Roll San Antonio Marathon</a>
-            <p>Nov 14, 2010 · San Antonio, TX</p>
-            <div class="tags">Time: 03:28:39 · Pace: 7:57/mi · Place: 296 / 4,674 · Percentile: 6.3%</div>
+            <p>Nov 14, 2010 | San Antonio, TX</p>
+            <div class="tags">Time: 03:28:39 | Pace: 7:57/mi | Place: 296 / 4,674 | Percentile: 6.3%</div>
           </div>
           <div class="article-item">
             <a href="https://www.marathonguide.com/races/run/austin-marathon-15/2009/results" target="_blank" rel="noopener noreferrer">Austin Marathon</a>
-            <p>Feb 15, 2009 · Austin, TX</p>
-            <div class="tags">Time: 03:34:46 · Pace: 8:11/mi · Place: 511 / 4,174 · Percentile: 12.2%</div>
+            <p>Feb 15, 2009 | Austin, TX</p>
+            <div class="tags">Time: 03:34:46 | Pace: 8:11/mi | Place: 511 / 4,174 | Percentile: 12.2%</div>
           </div>
           <div class="article-item">
             <a href="https://www.chevronhoustonmarathon.com/" target="_blank" rel="noopener noreferrer">Chevron Houston Marathon</a>
-            <p>Jan 13, 2008 · Houston, TX</p>
-            <div class="tags">Time: 03:30:29 · Pace: 8:01/mi · Place: 561 / 5,519 · Percentile: 10.2%</div>
+            <p>Jan 13, 2008 | Houston, TX</p>
+            <div class="tags">Time: 03:30:29 | Pace: 8:01/mi | Place: 561 / 5,519 | Percentile: 10.2%</div>
           </div>
         </div>
 
@@ -231,33 +256,16 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="grid">
-      <div class="col-12 card">
-        <h2>Get in touch</h2>
-        <p class="social">
-          <a href="https://github.com/agodonnell" target="_blank" aria-label="GitHub">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0.3C5.37 0.3 0 5.67 0 12.3c0 5.28 3.438 9.75 8.207 11.325.6.113.82-.263.82-.582 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.805 1.304 3.492.996.108-.776.42-1.305.763-1.605-2.665-.303-5.466-1.332-5.466-5.932 0-1.31.468-2.383 1.236-3.222-.124-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.99-.399 3.015-.404 1.023.005 2.053.137 3.015.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.805 5.625-5.475 5.922.432.372.816 1.102.816 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.216.699.825.58C20.565 22.047 24 17.577 24 12.3c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/ag-odonnell-64691ba9/" target="_blank" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4v-10h3v10zm-1.5-11.27c-.96 0-1.75-.79-1.75-1.75S4.54 4.23 5.5 4.23c.97 0 1.75.79 1.75 1.75S6.47 7.73 5.5 7.73zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.97V19h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59V19z"/></svg>
-          </a>
-          <a href="https://x.com/agodonnell" target="_blank" aria-label="X (Twitter)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.97 1H18.75L12.42 8.4L6.66 1H0L9.23 12.12L0 23H4.23L10.91 15.17L17.12 23H23.34L13.67 11.4L22.97 1Z"/></svg>
-          </a>
-          <a href="https://substack.com/@agodonnell" target="_blank" aria-label="Substack">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="3" rx="1"></rect><rect x="3" y="9" width="18" height="3" rx="1"></rect><path d="M3 14h18v6l-9-3-9 3v-6z"></path></svg>
-          </a>
-        </p>
-      </div>
-    </section>
-
     <footer class="footer">
-      <span>&copy; <span id="year"></span> Aaron O'Donnell</span>
-      <span>·</span>
-      <span>All rights reserved.</span>
-      <span>·</span>
-      <a href="#home" aria-label="Back to top">↑ Top</a>
+      <span>&copy; <span id="year"></span> agodonnell. All rights reserved.</span>
+      <span class="social">
+        <a href="https://www.linkedin.com/in/ag-odonnell-64691ba9/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4v-10h3v10zm-1.5-11.27c-.96 0-1.75-.79-1.75-1.75S4.54 4.23 5.5 4.23c.97 0 1.75.79 1.75 1.75S6.47 7.73 5.5 7.73zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.97V19h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59V19z"/></svg>
+        </a>
+        <a href="https://github.com/agodonnell" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0.3C5.37 0.3 0 5.67 0 12.3c0 5.28 3.438 9.75 8.207 11.325.6.113.82-.263.82-.582 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.805 1.304 3.492.996.108-.776.42-1.305.763-1.605-2.665-.303-5.466-1.332-5.466-5.932 0-1.31.468-2.383 1.236-3.222-.124-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.99-.399 3.015-.404 1.023.005 2.053.137 3.015.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.805 5.625-5.475 5.922.432.372.816 1.102.816 2.222 0 1.606-.015 2.898-.015 3.293 0 .321.216.699.825.58C20.565 22.047 24 17.577 24 12.3c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </span>
     </footer>
   </div>
 
