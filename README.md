@@ -4,8 +4,8 @@ I build secure generative AI and data platforms on governed data.
 
 Currently working on:
 
-- [`go-no-go`](https://github.com/agodonnell/go-no-go) — training readiness indicator built around HRV and recovery signals
-- `signal-engine` — macro financial signal generation *(private, in development)*
+- [`go-no-go`](https://github.com/agodonnell/go-no-go): training readiness indicator built around HRV and recovery signals
+- `signal-engine`: macro financial signal generation *(private, in development)*
 
 ---
 
