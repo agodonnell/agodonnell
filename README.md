@@ -1,6 +1,6 @@
 # 🍀 agodonnell 🍀
 
-I build systems that turn signals into decisions.
+I build secure generative AI and data platforms on governed data.
 
 Currently working on:
 
